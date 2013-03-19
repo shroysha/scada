@@ -15,6 +15,8 @@ import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.*;
+import modem.*;
+import log.*;
 
 public class SCADARunner
 {
@@ -22,6 +24,8 @@ public class SCADARunner
     static JTextArea mainArea;
     static JFrame frame;
     static SCADAServer server;
+    static modem.PageWithModem pagerServer = new modem.PageWithModem();
+    static log.LoggingSystem logServer = new log.LoggingSystem();
     
     public static void main(String[] args) 
     {
