@@ -55,7 +55,7 @@ public class PageWithModem implements Runnable, ReadListener {
             props = new Properties();
         
         if(!configFile.exists()) {
-            String makePath = configFile.getPath().replace("settings.cfg", "");
+            String makePath = configFile.getPath().replace("modemProps.cfg", "");
             new File(makePath).mkdirs();
             configFile.createNewFile();
             loadProps(); // if the config file doesnt exist, then create the config file and try to load the properties again
