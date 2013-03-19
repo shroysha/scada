@@ -62,6 +62,7 @@ public class SCADAServer
         Thread cc = new Thread(new ClientConnector());
         cc.start();
         
+        pageServ = new PageWithModem();
         this.startChecking(); 
     }
     
@@ -256,8 +257,7 @@ public class SCADAServer
     
     private synchronized void checkForAlarms()
     {
-        if(pageServ == null)
-            pageServ = new PageWithModem();
+            
         //System.out.println("Started Checking at: " + System.currentTimeMillis()/1000);
         for(SCADASite ss: sites)
         {

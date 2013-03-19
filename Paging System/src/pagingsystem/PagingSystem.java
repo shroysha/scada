@@ -4,13 +4,11 @@
  */
 package pagingsystem;
 
-import employee.Employee;
 import alert.Alert;
-import util.AlertListener;
-import util.UpdateListener;
 import alert.AlertMonitoringSystem;
+import employee.Employee;
 import employee.EmployeeHandler;
-import employee.EmployeeHandler.EmployeePanel;
+import employee.gui.EmployeePanel;
 import java.awt.BorderLayout;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
@@ -26,7 +24,9 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
+import util.AlertListener;
 import util.LogListener;
+import util.UpdateListener;
 import static util.Utilities.getMainDirPath;
 
 

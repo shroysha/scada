@@ -4,20 +4,16 @@
  */
 package employee;
 
-import java.awt.BorderLayout;
-
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-
-import java.util.*;
-
-import javax.swing.JList;
+import employee.gui.EmployeePanel;
+import java.io.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
-import javax.swing.JPanel;
-import javax.swing.JTabbedPane;
-import javax.swing.border.EmptyBorder;
-
+import util.Utilities;
 import static util.Utilities.getMainDirPath;
 
 /**
@@ -27,8 +23,7 @@ import static util.Utilities.getMainDirPath;
 public class EmployeeHandler {
     
     private final static File employeeDir = new File(getMainDirPath() + "/pagingsystem/employees/");
-    private final static String[] days = {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
-    
+    private final static String[] days = Utilities.getDaysOfWeek();
     private ArrayList<Employee> allEmployees;
     private final EmployeePanel parent;
     
@@ -37,7 +32,7 @@ public class EmployeeHandler {
     public EmployeeHandler() {
         super();
         readEmployees();
-        parent = new EmployeePanel();
+        parent = new EmployeePanel(this);
     }
     
     private void readEmployees() {
@@ -57,14 +52,17 @@ public class EmployeeHandler {
                 lineStop = 1;
                 while(scanner.hasNextLine()) {
                     String line = scanner.nextLine();
-                    String[] tokens = line.split(",");
-                    String pager = tokens[0];
-                    double startTime = Double.parseDouble(tokens[1]);
-                    double stopTime = Double.parseDouble(tokens[2]);
-                    int priority = Integer.parseInt(tokens[3]);
-                    Employee employee = new Employee(pager, startTime, stopTime, priority, i + 1);
-                    allEmployees.add(employee);
-                    lineStop++;
+                    if(!line.trim().equals("")) {
+                        String[] tokens = line.split(",");
+                        String name = tokens[0];
+                        String pager = tokens[1];
+                        double startTime = Double.parseDouble(tokens[2]);
+                        double stopTime = Double.parseDouble(tokens[3]);
+                        int priority = Integer.parseInt(tokens[4]);
+                        Employee employee = new Employee(name, pager, startTime, stopTime, priority, i + 1);
+                        allEmployees.add(employee);
+                        lineStop++;
+                    }
                 }
             }
             
@@ -73,6 +71,7 @@ public class EmployeeHandler {
             System.exit(5);
         } catch(Exception ex) {
             JOptionPane.showMessageDialog(parent, "Error parsing employee in " + fileStop + ".csv at line " + lineStop);
+            Logger.getLogger(EmployeeHandler.class.getName()).log(Level.SEVERE, null, ex);
             System.exit(4);
         }
     }
@@ -100,11 +99,11 @@ public class EmployeeHandler {
         return availible;
     }
     
-    private static void sortByPriority(Employee[] employees) {
+    public static void sortByPriority(Employee[] employees) {
         Arrays.sort(employees);
     }
     
-    private static void sortByPriority(ArrayList<Employee> employeesList) {
+    public static void sortByPriority(ArrayList<Employee> employeesList) {
         Collections.sort(employeesList);
     }
     
@@ -112,60 +111,33 @@ public class EmployeeHandler {
         return parent;
     }
     
-    public class EmployeePanel extends JPanel {
-        
-        private final int[] daysOfWeek = {Calendar.SUNDAY, Calendar.MONDAY, Calendar.TUESDAY, Calendar.WEDNESDAY, Calendar.THURSDAY, Calendar.FRIDAY, Calendar.SATURDAY};
-        private final String[] namesOfDayOfWeek = {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
-        
-        public EmployeePanel() {
-            super(new BorderLayout());
-            init();
+    public void save() {
+        ArrayList<Employee>[] daysEmployees = new ArrayList[Utilities.getDaysOfWeek().length];
+        for(int i = 0; i < daysEmployees.length; i++) {
+            daysEmployees[i] = new ArrayList();
         }
         
-        private void init() {
-            JTabbedPane weekTabbed = new JTabbedPane();
-            for(int i = 0; i < daysOfWeek.length; i++) {
-                weekTabbed.addTab(namesOfDayOfWeek[i], new EmployeeDayPanel(daysOfWeek[i]));
-            }
-            this.add(weekTabbed, BorderLayout.CENTER);
+        for(Employee employee: getAllEmployees()) {
+            daysEmployees[employee.getDayWorking() - 1].add(employee);
         }
         
-        /**
-         * Displays all the employees that work on the day imputed into the constructor. They are sorted by priority
-         */
-        private class EmployeeDayPanel extends JPanel {
-            
-            private final int dayOfWeek;
-            private ArrayList<Employee> onDayEmployees = new ArrayList();
-            
-            public EmployeeDayPanel(int dayOfWeek) {
-                super(new BorderLayout());
-                this.dayOfWeek = dayOfWeek;
-                init();
-            }
-            
-            private void init() {
-                this.setBorder(new EmptyBorder(10,10,10,10));
-                addAllEmployees();
-                sortByPriority(onDayEmployees);
-                String[] numbers = new String[onDayEmployees.size()];
-                for(int i = 0; i < numbers.length; i++) {
-                    numbers[i] = onDayEmployees.get(i).getPager();
+        for(int i = 0; i < days.length; i++) {
+            String day = days[i];
+            File file = new File(employeeDir.getPath() + "/" + day + ".csv");
+            try {   
+                PrintWriter writer = new PrintWriter(new FileWriter(file));
+                
+                String text;
+                for(Employee employee: daysEmployees[i]) {
+                    text = "" + employee.getName() + "," + employee.getPager() + "," + employee.getStartHour() + "," + employee.getStopHour() + "," + employee.getPriority();
+                    writer.println(text);
                 }
                 
-                JList list = new JList(numbers);
-                this.add(list, BorderLayout.CENTER);
-                
+                writer.close();
+            } catch (IOException ex) {
+                Logger.getLogger(EmployeeHandler.class.getName()).log(Level.SEVERE, null, ex);
             }
             
-            private void addAllEmployees() {
-                for(Employee employee: allEmployees) {
-                    if(dayOfWeek == employee.getDayWorking())
-                        onDayEmployees.add(employee);
-                }
-            }
-            
-    
         }
     }
 }
