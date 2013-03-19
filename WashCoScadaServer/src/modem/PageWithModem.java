@@ -59,6 +59,9 @@ public class PageWithModem implements Runnable, ReadListener {
             new File(makePath).mkdirs();
             configFile.createNewFile();
             loadProps(); // if the config file doesnt exist, then create the config file and try to load the properties again
+            props.setProperty(MC_IP, "");
+            props.setProperty(MC_PORT, "");
+            props.setProperty(PP_PORT, "");
             savePropsAndClose();
         } else {
             props.load(new FileInputStream(configFile)); 
