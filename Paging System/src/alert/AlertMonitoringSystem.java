@@ -578,6 +578,7 @@ public final class AlertMonitoringSystem implements UpdateListener{
             });
             
             logArea = new JTextArea();
+            logArea.setEditable(false);
             
             JPanel alertPanel = new JPanel(new GridLayout(2,2));
             

@@ -5,6 +5,7 @@
 package pagingsystem;
 
 import alert.Alert;
+import employee.Employee;
 
 /**
  *
@@ -19,11 +20,13 @@ class Page {
     private final String message;
     private final String checkSum;
     private final String pagerNumber;
+    private final Employee employee;
     
-    protected Page(Alert alert, String pagerNumber) {
+    protected Page(Alert alert, Employee employee) {
         super();
+        this.employee = employee;
         this.message = alert.getMessage();
-        this.pagerNumber = pagerNumber;
+        this.pagerNumber = employee.getPager();
         this.checkSum = calculateChecksum();
     }
     
@@ -71,5 +74,9 @@ class Page {
         String string = STX + pagerNumber + "\r" + message + "\r" + ETX + checkSum + "\r";
         System.out.println(string);
         return string;
+    }
+    
+    public Employee getEmployee() {
+        return employee;
     }
 }

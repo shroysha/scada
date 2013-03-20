@@ -81,7 +81,7 @@ public final class PagingSystem implements AlertListener, UpdateListener {
             
             String buffer = readBuffer();
             
-            notifyAllLogListeners("Received " + buffer + " from paging server");
+            notifyAllLogListeners("Paged " + page.getEmployee().getName());
         } catch(IOException ex) {
             Logger.getLogger(PagingSystem.class.getName()).log(Level.SEVERE, null, ex);
             errorRecovery(ex);
@@ -360,7 +360,7 @@ public final class PagingSystem implements AlertListener, UpdateListener {
                 }
                 
                 for(Employee employee: cascade) {
-                    Page page = new Page(alert, employee.getPager());
+                    Page page = new Page(alert, employee);
                     ps.sendPage(page);
                 }
                 
@@ -423,6 +423,7 @@ public final class PagingSystem implements AlertListener, UpdateListener {
             });
             
             logArea = new JTextArea();
+            logArea.setEditable(false);
             
             JPanel alertPanel = new JPanel(new GridLayout(2,2));
             
@@ -459,7 +460,7 @@ public final class PagingSystem implements AlertListener, UpdateListener {
         public void onLog(String logText) {
             SimpleDateFormat sdf = new SimpleDateFormat("MM-dd-yyyy HH:mm:ss");
             String formattedDate = sdf.format(Calendar.getInstance().getTime());
-            logArea.append(logText + " at " + formattedDate + "\n");
+            logArea.append(logText + " on " + formattedDate + "\n");
         }
     }
     

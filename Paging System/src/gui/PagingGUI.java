@@ -24,6 +24,9 @@ public class PagingGUI extends JFrame {
         
         PagingGUI gui = null;
         try {
+            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());;
+        } catch (Exception ex) {}
+        try {
             gui = new PagingGUI();
         } catch (IOException ex) {
             Logger.getLogger(PagingGUI.class.getName()).log(Level.SEVERE, null, ex);
@@ -35,9 +38,7 @@ public class PagingGUI extends JFrame {
     
     public PagingGUI() throws IOException {
         super("Paging System");
-        try {
-            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());;
-        } catch (Exception ex) {}
+        
         
         ps = new PagingSystem();
         init();
