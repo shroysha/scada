@@ -4,19 +4,19 @@
  */
 package modem;
 
+import java.awt.BorderLayout;
+import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.io.*;
-import java.net.InetAddress;
-import java.net.ServerSocket;
-import java.net.Socket;
-import java.net.UnknownHostException;
-import java.text.DecimalFormat;
-import java.text.NumberFormat;
+import java.net.*;
 import java.util.ArrayList;
 import java.util.Properties;
 import java.util.Random;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.swing.JOptionPane;
+import javax.swing.*;
+import javax.swing.border.EmptyBorder;
 import log.LoggingSystem;
 
 /**
@@ -33,7 +33,11 @@ public class PageWithModem implements Runnable, ReadListener {
     
     private Properties props = new Properties();
     
-    private NumberFormat format = new DecimalFormat("0000");
+    
+    private JobAckCodeGenerator jacg = new JobAckCodeGenerator();
+    
+    private ServerSocket pagingModuleServer;
+    private Socket pagingModuleSocket;
     
     public PageWithModem() {
         super();
@@ -55,10 +59,13 @@ public class PageWithModem implements Runnable, ReadListener {
             props = new Properties();
         
         if(!configFile.exists()) {
-            String makePath = configFile.getPath().replace("settings.cfg", "");
+            String makePath = configFile.getPath().replace("modemProps.cfg", "");
             new File(makePath).mkdirs();
             configFile.createNewFile();
             loadProps(); // if the config file doesnt exist, then create the config file and try to load the properties again
+            props.setProperty(MC_IP, "");
+            props.setProperty(MC_PORT, "");
+            props.setProperty(PP_PORT, "");
             savePropsAndClose();
         } else {
             props.load(new FileInputStream(configFile)); 
@@ -145,20 +152,47 @@ public class PageWithModem implements Runnable, ReadListener {
 ;
     }
     
+    private void resetPagingModule() {
+        if(pagingModuleServer != null && !pagingModuleServer.isClosed()) {
+            try {
+                pagingModuleServer.close();
+            } catch (IOException ex) {
+                Logger.getLogger(PageWithModem.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+        
+        if(pagingModuleSocket != null && !pagingModuleSocket.isClosed()) {
+            try {
+                pagingModuleSocket.close();
+            } catch (IOException ex) {
+                Logger.getLogger(PageWithModem.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+        
+        new Thread(this).start();
+    }
+    
+    private void resetModemConnector() {
+        initModem();
+    }
+    
     @Override
     public void run() {
-        try {
-            
-            
+        try{
             int port = Integer.parseInt(props.getProperty(PP_PORT));
-            ServerSocket ss = new ServerSocket(port);
-            while(true) {
-                Socket socket = ss.accept();
-                plug = new PagingPlug(socket);
-            }
-            
-        } catch (IOException ex) {
+            pagingModuleServer = new ServerSocket(port);
+        } catch(IOException ex) {
             JOptionPane.showMessageDialog(null, "Server already on desginated port. Please reconfigure " + PP_PORT + " in " + configFile.getPath());
+            return;
+        }
+        
+        while(!pagingModuleServer.isClosed()) {
+            try{
+                pagingModuleSocket = pagingModuleServer.accept();
+                plug = new PagingPlug(pagingModuleSocket);
+            } catch(IOException ex) {
+                JOptionPane.showMessageDialog(null, "Error opening streams" + PP_PORT + " in " + configFile.getPath());
+            }
         }
         
     }
@@ -186,9 +220,9 @@ public class PageWithModem implements Runnable, ReadListener {
                         return;
                     }
                     int pin = Integer.parseInt(pinText);
-                    int jobID = plug.jacg.getJobID(pin);
+                    int jobID = jacg.getJobID(pin);
                     plug.acknowledgePage(jobID);
-                    plug.jacg.ackJobID(jobID);
+                    jacg.ackJobID(jobID);
                 } catch (IOException ex) {
                     fix();
                     onRead(pinText);
@@ -198,22 +232,20 @@ public class PageWithModem implements Runnable, ReadListener {
         new Thread(r).start();
     }
     
-    public class PagingPlug  {
+    private class PagingPlug  {
         
         private InputStream is;
         private OutputStream os;
-        private JobAckCodeGenerator jacg;
         
         public PagingPlug(Socket socket) throws IOException {
             super();
             is = socket.getInputStream();
             os = socket.getOutputStream();
-            jacg = new JobAckCodeGenerator();
         }
         
         protected void startPage(int jobID, String message) throws IOException {
             int ackCode = jacg.generateAckCode(jobID);
-            String compose = "ST " + jobID + " " + message + " ACKCODE:" + format.format(ackCode);
+            String compose = "ST " + jobID + " " + message + " ACKCODE:" + ackCode;
             os.write(compose.getBytes());
             os.flush();
             LoggingSystem.getLoggingSystem().alertAllLogListeners("Page sent: jobID-" + jobID + " message-" + message);
@@ -351,4 +383,121 @@ public class PageWithModem implements Runnable, ReadListener {
             }
         }
     }
+    
+    private void configure(JFrame parent) {
+        JDialog dialog = new JDialog(parent, "Configure", true);
+        dialog.setLayout(new BorderLayout());
+        dialog.add(new PageAndModemPanel(this));
+        dialog.pack();
+        dialog.setVisible(true);
+    }
+    
+    private class PageAndModemPanel extends JPanel {
+        
+        private JLabel pagingModulePortLabel = new JLabel(), modemIPLabel = new JLabel(), modemPortLabel = new JLabel();
+        private JButton changePMPButton = new JButton("Change"), changeMIPButton = new JButton("Change"), changeMPButton = new JButton("Change");
+        
+        private PageWithModem pwm;
+        
+        public PageAndModemPanel(PageWithModem pwm) {
+            super(new GridLayout(3,2,10,10));
+            this.pwm = pwm;
+            init();
+        }
+        
+        private void init() {
+            this.setBorder(new EmptyBorder(10,10,10,10));
+            
+            changePMPButton.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent ae) {
+                    changePMP();
+                    resetPagingModule();
+                }
+            });
+            
+            changeMIPButton.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent ae) {
+                    changeMIP();
+                    resetModemConnector();
+                }
+            });
+            
+            changeMPButton.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent ae) {
+                    changeMP();
+                    resetModemConnector();
+                }
+            });
+            
+            this.add(pagingModulePortLabel);
+            this.add(changePMPButton);
+            
+            this.add(modemIPLabel);
+            this.add(changeMIPButton);
+            
+            this.add(modemPortLabel);
+            this.add(changeMPButton);
+        }
+        
+        private void changePMP() {
+            String port = null;
+            do {
+                port = JOptionPane.showInputDialog(this, "Enter Paging Module Port").trim();
+                
+            } while(!isValidPort(port));
+            
+            props.setProperty(PP_PORT, port);
+        }
+        
+        private void changeMIP() {
+            String ip = null;
+            do {
+                ip = JOptionPane.showInputDialog(this, "Enter Phone Modem IP").trim();
+                
+            } while(!isValidIPv4(ip));
+            
+            props.setProperty(MC_IP, ip);
+        }
+        
+        private void changeMP() {
+            String port = null;
+            do {
+                port = JOptionPane.showInputDialog(this, "Enter Phone Modem Port").trim();
+                
+            } while(!isValidPort(port));
+            
+            props.setProperty(MC_PORT, port);
+        }
+    }
+    
+    private boolean isValidIPv4(String ip) {
+        if(ip == null || ip.equals(""))
+            return false;
+        
+        try {
+            InetAddress inet = InetAddress.getByName(ip);
+            return inet.getHostAddress().equals(ip) && inet instanceof Inet4Address;
+        } catch (final UnknownHostException ex) {
+            return false;
+        }
+    }
+    
+    private static boolean isValidPort(String port) {
+        if(port == null || port.equals(""))
+            return false;
+        
+        try {
+            int p = Integer.parseInt(port);
+            if(p >= 0 && p <= 65535)
+                return true;
+            else
+                return false;
+        } catch(Exception ex) {
+            return false;
+        }
+    }
 }
+
