@@ -384,6 +384,14 @@ public class PageWithModem implements Runnable, ReadListener {
         }
     }
     
+    public static void main(String[] args) {
+        JDialog dialog = new JDialog(new JFrame(), "Configure", true);
+        dialog.setLayout(new BorderLayout());
+        dialog.add(new PageAndModemPanel(null));
+        dialog.pack();
+        dialog.setVisible(true);
+    }
+    
     private void configure(JFrame parent) {
         JDialog dialog = new JDialog(parent, "Configure", true);
         dialog.setLayout(new BorderLayout());
@@ -392,7 +400,7 @@ public class PageWithModem implements Runnable, ReadListener {
         dialog.setVisible(true);
     }
     
-    private class PageAndModemPanel extends JPanel {
+    private static class PageAndModemPanel extends JPanel {
         
         private JLabel pagingModulePortLabel = new JLabel(), modemIPLabel = new JLabel(), modemPortLabel = new JLabel();
         private JButton changePMPButton = new JButton("Change"), changeMIPButton = new JButton("Change"), changeMPButton = new JButton("Change");
@@ -413,6 +421,7 @@ public class PageWithModem implements Runnable, ReadListener {
                 public void actionPerformed(ActionEvent ae) {
                     changePMP();
                     resetPagingModule();
+                    updateLabels();
                 }
             });
             
@@ -421,6 +430,7 @@ public class PageWithModem implements Runnable, ReadListener {
                 public void actionPerformed(ActionEvent ae) {
                     changeMIP();
                     resetModemConnector();
+                    updateLabels();
                 }
             });
             
@@ -429,6 +439,7 @@ public class PageWithModem implements Runnable, ReadListener {
                 public void actionPerformed(ActionEvent ae) {
                     changeMP();
                     resetModemConnector();
+                    updateLabels();
                 }
             });
             
@@ -440,6 +451,16 @@ public class PageWithModem implements Runnable, ReadListener {
             
             this.add(modemPortLabel);
             this.add(changeMPButton);
+            
+            updateLabels();
+        }
+        
+        private void updateLabels() {
+            if(pwm != null) {
+                pagingModulePortLabel.setText("Paging Module Port: " + props.getProperty(PP_PORT));
+                modemIPLabel.setText("Phone Modem IP: " + props.getProperty(MC_IP));
+                modemPortLabel.setText("Phone Modem Port: " + props.getProperty(MC_PORT));
+            }
         }
         
         private void changePMP() {
