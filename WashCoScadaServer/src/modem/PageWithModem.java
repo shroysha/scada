@@ -45,6 +45,8 @@ public class PageWithModem implements Runnable, ReadListener {
         try {
             loadProps();
         } catch (IOException ex) {}
+        checkProps();
+        
         
         initModem();
         
@@ -66,20 +68,45 @@ public class PageWithModem implements Runnable, ReadListener {
             props.setProperty(MC_IP, "");
             props.setProperty(MC_PORT, "");
             props.setProperty(PP_PORT, "");
-            savePropsAndClose();
+            saveProps();
         } else {
             props.load(new FileInputStream(configFile)); 
         }
     }
     
-    private void savePropsAndClose() {
+    private void checkProps() {
+        checkPPPort();
+        checkMCIP();
+        checkMCPort();
+    }
+    
+    private void checkPPPort() {
+        while(!isValidPort(props.getProperty(PP_PORT))) {
+            String port = JOptionPane.showInputDialog("Enter Paging Plugin Port").trim();
+            props.setProperty(PP_PORT, port);
+        }
+    }
+    
+    private void checkMCIP() {
+        while(!isValidPort(props.getProperty(MC_IP))) {
+            String ip = JOptionPane.showInputDialog("Enter Phone Modem IP").trim();
+            props.setProperty(MC_IP, ip);
+        }
+    }
+    
+    private void checkMCPort() {
+        while(!isValidPort(props.getProperty(MC_PORT))) {
+            String port = JOptionPane.showInputDialog("Enter Phone Modem Port".trim());
+            props.setProperty(MC_PORT, port);
+        }
+    }
+    
+    private void saveProps() {
         try {
             props.store(new FileOutputStream(configFile), "Modem Properties, used by SCADA server");
             JOptionPane.showMessageDialog(null, "Please configure modem properties in " + configFile.getPath());
-            System.exit(7);
         } catch (IOException ex) {
             Logger.getLogger(PageWithModem.class.getName()).log(Level.SEVERE, null, ex);
-            System.exit(8);
         }
     }
     
@@ -384,14 +411,6 @@ public class PageWithModem implements Runnable, ReadListener {
         }
     }
     
-    public static void main(String[] args) {
-        JDialog dialog = new JDialog(new JFrame(), "Configure", true);
-        dialog.setLayout(new BorderLayout());
-        dialog.add(new PageAndModemPanel(null));
-        dialog.pack();
-        dialog.setVisible(true);
-    }
-    
     private void configure(JFrame parent) {
         JDialog dialog = new JDialog(parent, "Configure", true);
         dialog.setLayout(new BorderLayout());
@@ -400,7 +419,7 @@ public class PageWithModem implements Runnable, ReadListener {
         dialog.setVisible(true);
     }
     
-    private static class PageAndModemPanel extends JPanel {
+    private class PageAndModemPanel extends JPanel {
         
         private JLabel pagingModulePortLabel = new JLabel(), modemIPLabel = new JLabel(), modemPortLabel = new JLabel();
         private JButton changePMPButton = new JButton("Change"), changeMIPButton = new JButton("Change"), changeMPButton = new JButton("Change");
