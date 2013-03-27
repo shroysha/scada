@@ -202,7 +202,8 @@ public class PageWithModem implements Runnable, ReadListener {
             
     
     private void resetModemConnector() {
-        initModem();
+        stopModemConnector();
+        startModemConnector();
     }
     
     private void stopModemConnector() {
@@ -238,7 +239,7 @@ public class PageWithModem implements Runnable, ReadListener {
                 pagingModuleSocket = pagingModuleServer.accept();
                 plug = new PagingPlug(pagingModuleSocket);
             } catch(IOException ex) {
-                JOptionPane.showMessageDialog(null, "Error opening streams" + PP_PORT + " in " + configFile.getPath());
+                JOptionPane.showMessageDialog(null, "Error opening streams, please try again");
             }
         }
         
