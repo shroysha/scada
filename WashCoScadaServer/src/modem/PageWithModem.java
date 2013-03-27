@@ -46,12 +46,6 @@ public class PageWithModem implements Runnable, ReadListener {
             loadProps();
         } catch (IOException ex) {}
         checkProps();
-        
-        
-        initModem();
-        
-        //used to declare plug
-        new Thread(this).start();
     }
 
     
@@ -180,6 +174,15 @@ public class PageWithModem implements Runnable, ReadListener {
     }
     
     private void resetPagingModule() {
+        stopPagingModule();
+        startPagingModule();
+    }
+    
+    private void startPagingModule() {
+        new Thread(this).start();
+    }
+    
+    public void stopPagingModule() {
         if(pagingModuleServer != null && !pagingModuleServer.isClosed()) {
             try {
                 pagingModuleServer.close();
@@ -195,12 +198,29 @@ public class PageWithModem implements Runnable, ReadListener {
                 Logger.getLogger(PageWithModem.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
-        
-        new Thread(this).start();
     }
+            
     
     private void resetModemConnector() {
         initModem();
+    }
+    
+    private void stopModemConnector() {
+        mc = null;
+    }
+    
+    private void startModemConnector() {
+        initModem();
+    }
+    
+    public void start() {
+        startModemConnector();
+        startPagingModule();
+    }
+    
+    public void stop() {
+        stopModemConnector();
+        stopPagingModule();
     }
     
     @Override
