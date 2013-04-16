@@ -39,6 +39,7 @@ public class EmployeeHandler {
         //if there is an error parsing employee
         int lineStop = 1;
         String fileStop = null;
+        File file = null;
         try{
             if(!employeeDir.exists())
                 employeeDir.mkdirs();
@@ -46,8 +47,9 @@ public class EmployeeHandler {
             allEmployees = new ArrayList();
            
             for(int i = 0; i < days.length; i++) {
+                try {
                 fileStop = days[i];
-                File file = new File(employeeDir.getPath() + "/" + days[i] + ".csv");
+                file = new File(employeeDir.getPath() + "/" + days[i] + ".csv");
                 Scanner scanner = new Scanner(file);
                 lineStop = 1;
                 while(scanner.hasNextLine()) {
@@ -64,11 +66,17 @@ public class EmployeeHandler {
                         lineStop++;
                     }
                 }
+                }catch(FileNotFoundException ex) {
+                    try {
+                        file.createNewFile();
+                    } catch(IOException ex1) {
+                        JOptionPane.showMessageDialog(parent, "Couldn't create file " + fileStop + ".csv");
+                        Logger.getLogger(EmployeeHandler.class.getName()).log(Level.SEVERE, null, ex);
+                        System.exit(5);
+                    }
+                }
             }
             
-        } catch(FileNotFoundException ex) {
-            JOptionPane.showMessageDialog(parent, "Please place a file called \"" + fileStop + ".csv\" into " + employeeDir.getParent() + "/");
-            System.exit(5);
         } catch(Exception ex) {
             JOptionPane.showMessageDialog(parent, "Error parsing employee in " + fileStop + ".csv at line " + lineStop);
             Logger.getLogger(EmployeeHandler.class.getName()).log(Level.SEVERE, null, ex);

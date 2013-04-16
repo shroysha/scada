@@ -18,6 +18,7 @@ import java.util.logging.Logger;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import log.LoggingSystem;
+import static util.Utilities.getBaseDirectory;
 
 /**
  *
@@ -26,7 +27,7 @@ import log.LoggingSystem;
 public class PageWithModem implements Runnable, ReadListener {
     
     private static final String PP_PORT = "pagingPlugPort", MC_IP = "voiceModemIP", MC_PORT = "voiceModemPort";
-    private static final File configFile = new File("modemProps.cfg");
+    private static final File configFile = new File(getBaseDirectory() + "pagingsystem/" + "modemProps.cfg");
     
     private ModemConnector mc;
     private PagingPlug plug;
