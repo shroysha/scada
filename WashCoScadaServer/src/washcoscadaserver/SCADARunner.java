@@ -14,6 +14,10 @@ import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
+import java.util.logging.FileHandler;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.*;
 import modem.*;
 import log.*;
@@ -21,10 +25,12 @@ import log.*;
 public class SCADARunner
 {
 
+    static final Logger log = Logger.getGlobal();
+    
     static JTextArea mainArea;
     static JFrame frame;
     static SCADAServer server;
-    static modem.PageWithModem pagerServer = new modem.PageWithModem();
+    //static modem.PageWithModem pagerServer = new modem.PageWithModem();
     static log.LoggingSystem logServer = new log.LoggingSystem();
     
     public static void main(String[] args) 
@@ -39,7 +45,6 @@ public class SCADARunner
         JPanel main = new JPanel();
         JPanel titlePanel = new JPanel();
         titlePanel.setPreferredSize(new Dimension(500,30));
-        //titlePanel.setLayout(new BorderLayout());
         main.setPreferredSize(new Dimension(500,500));
         
         mainArea = new JTextArea(30,30);
@@ -57,8 +62,7 @@ public class SCADARunner
         
         title.setFont(Font.getFont("Calibri"));
         title.setForeground(Color.RED);
-        //title.setFont(new Font("Calibri", 40, Font.BOLD));
-        //title.setPreferredSize(new Dimension(300, 50));
+
         titlePanel.add(title);
         frame.add(titlePanel,BorderLayout.NORTH);
         Timer bob = new Timer(5001, new TimerListener());
@@ -66,6 +70,32 @@ public class SCADARunner
         frame.setVisible(true);
     }
     
+    static void dispatch(String[] args)
+    {
+        for(String s: args)
+        {
+            s = s.replaceAll("-", "");
+            char command = s.charAt(0);
+            
+            switch (command)
+            {
+                case 'v':
+                    log.setLevel(Level.ALL);
+            try 
+            {
+                FileHandler fh = new FileHandler("log.txt");
+                log.addHandler(fh);
+                log.info("Hai");
+            } catch (IOException ex) 
+            {
+                Logger.getGlobal().info(ex.toString());
+            } catch (SecurityException ex) 
+            {
+                Logger.getGlobal().info(ex.toString());
+            }
+            }
+        }
+    }
     
     static class TimerListener implements ActionListener
     {
