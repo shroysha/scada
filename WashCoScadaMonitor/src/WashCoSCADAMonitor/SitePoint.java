@@ -12,10 +12,10 @@ import java.awt.geom.Point2D;
  */
 public class SitePoint extends Point2D.Double
 {
-    Integer alarmStatus;
-    String siteName;
+    private int alarmStatus;
+    private String siteName;
     
-    public SitePoint(double x, double y, Integer aAlarmStatus, String aSiteName)
+    public SitePoint(double x, double y, int aAlarmStatus, String aSiteName)
     {
         super(x,y);
         alarmStatus = aAlarmStatus;
@@ -27,7 +27,7 @@ public class SitePoint extends Point2D.Double
         return siteName;
     }
     
-    public Integer getAlarmStatus()
+    public int getAlarmStatus()
     {
         return alarmStatus;
     }

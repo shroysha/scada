@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version="1.0" encoding="US-ASCII" standalone="no"?>
 <!DOCTYPE log SYSTEM "logger.dtd">
 <log>
 <record>
-  <date>2013-05-24T10:35:33</date>
-  <millis>1369406133462</millis>
-  <sequence>1</sequence>
+  <date>2013-05-28T10:04:42</date>
+  <millis>1369749882752</millis>
+  <sequence>0</sequence>
   <logger>global</logger>
   <level>INFO</level>
   <class>washcoscadaserver.SCADARunner</class>
@@ -13,8 +13,8 @@
   <message>Hai</message>
 </record>
 <record>
-  <date>2013-05-24T10:35:33</date>
-  <millis>1369406133501</millis>
+  <date>2013-05-28T10:04:45</date>
+  <millis>1369749885731</millis>
   <sequence>2</sequence>
   <logger>global</logger>
   <level>INFO</level>
@@ -22,5 +22,467 @@
   <method>&lt;init&gt;</method>
   <thread>1</thread>
   <message>Starting up sites.</message>
+</record>
+<record>
+  <date>2013-05-28T10:04:45</date>
+  <millis>1369749885739</millis>
+  <sequence>3</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>startUpSites</method>
+  <thread>1</thread>
+  <message>Processing sites.</message>
+</record>
+<record>
+  <date>2013-05-28T10:04:45</date>
+  <millis>1369749885740</millis>
+  <sequence>4</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>startUpSites</method>
+  <thread>1</thread>
+  <message>Processing sites.</message>
+</record>
+<record>
+  <date>2013-05-28T10:04:45</date>
+  <millis>1369749885741</millis>
+  <sequence>5</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>startUpSites</method>
+  <thread>1</thread>
+  <message>Processing sites.</message>
+</record>
+<record>
+  <date>2013-05-28T10:04:45</date>
+  <millis>1369749885742</millis>
+  <sequence>6</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>startUpSites</method>
+  <thread>1</thread>
+  <message>Processing sites.</message>
+</record>
+<record>
+  <date>2013-05-28T10:04:45</date>
+  <millis>1369749885744</millis>
+  <sequence>7</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>startUpSites</method>
+  <thread>1</thread>
+  <message>Processing sites.</message>
+</record>
+<record>
+  <date>2013-05-28T10:04:45</date>
+  <millis>1369749885745</millis>
+  <sequence>8</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>startUpSites</method>
+  <thread>1</thread>
+  <message>Processing sites.</message>
+</record>
+<record>
+  <date>2013-05-28T10:04:45</date>
+  <millis>1369749885746</millis>
+  <sequence>9</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>startUpSites</method>
+  <thread>1</thread>
+  <message>Processing sites.</message>
+</record>
+<record>
+  <date>2013-05-28T10:04:45</date>
+  <millis>1369749885748</millis>
+  <sequence>10</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>startUpSites</method>
+  <thread>1</thread>
+  <message>Processing sites.</message>
+</record>
+<record>
+  <date>2013-05-28T10:04:45</date>
+  <millis>1369749885749</millis>
+  <sequence>11</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>startUpSites</method>
+  <thread>1</thread>
+  <message>Processing sites.</message>
+</record>
+<record>
+  <date>2013-05-28T10:04:45</date>
+  <millis>1369749885750</millis>
+  <sequence>12</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>startUpSites</method>
+  <thread>1</thread>
+  <message>Processing sites.</message>
+</record>
+<record>
+  <date>2013-05-28T10:04:45</date>
+  <millis>1369749885751</millis>
+  <sequence>13</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>startUpSites</method>
+  <thread>1</thread>
+  <message>Processing sites.</message>
+</record>
+<record>
+  <date>2013-05-28T10:04:45</date>
+  <millis>1369749885752</millis>
+  <sequence>14</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>startUpSites</method>
+  <thread>1</thread>
+  <message>Processing sites.</message>
+</record>
+<record>
+  <date>2013-05-28T10:04:45</date>
+  <millis>1369749885755</millis>
+  <sequence>15</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>startUpSites</method>
+  <thread>1</thread>
+  <message>Processing sites.</message>
+</record>
+<record>
+  <date>2013-05-28T10:04:45</date>
+  <millis>1369749885756</millis>
+  <sequence>16</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>startUpSites</method>
+  <thread>1</thread>
+  <message>Processing sites.</message>
+</record>
+<record>
+  <date>2013-05-28T10:04:45</date>
+  <millis>1369749885757</millis>
+  <sequence>17</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>startUpSites</method>
+  <thread>1</thread>
+  <message>Processing sites.</message>
+</record>
+<record>
+  <date>2013-05-28T10:04:45</date>
+  <millis>1369749885758</millis>
+  <sequence>18</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>startUpSites</method>
+  <thread>1</thread>
+  <message>Processing sites.</message>
+</record>
+<record>
+  <date>2013-05-28T10:04:45</date>
+  <millis>1369749885760</millis>
+  <sequence>19</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>startUpSites</method>
+  <thread>1</thread>
+  <message>Processing sites.</message>
+</record>
+<record>
+  <date>2013-05-28T10:04:45</date>
+  <millis>1369749885763</millis>
+  <sequence>20</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>startUpSites</method>
+  <thread>1</thread>
+  <message>Processing sites.</message>
+</record>
+<record>
+  <date>2013-05-28T10:04:45</date>
+  <millis>1369749885764</millis>
+  <sequence>21</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>startUpSites</method>
+  <thread>1</thread>
+  <message>Processing sites.</message>
+</record>
+<record>
+  <date>2013-05-28T10:04:45</date>
+  <millis>1369749885765</millis>
+  <sequence>22</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>startUpSites</method>
+  <thread>1</thread>
+  <message>Processing sites.</message>
+</record>
+<record>
+  <date>2013-05-28T10:04:45</date>
+  <millis>1369749885766</millis>
+  <sequence>23</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>startUpSites</method>
+  <thread>1</thread>
+  <message>Processing sites.</message>
+</record>
+<record>
+  <date>2013-05-28T10:04:45</date>
+  <millis>1369749885767</millis>
+  <sequence>24</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>startUpSites</method>
+  <thread>1</thread>
+  <message>Processing sites.</message>
+</record>
+<record>
+  <date>2013-05-28T10:04:45</date>
+  <millis>1369749885768</millis>
+  <sequence>25</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>startUpSites</method>
+  <thread>1</thread>
+  <message>Processing sites.</message>
+</record>
+<record>
+  <date>2013-05-28T10:04:45</date>
+  <millis>1369749885769</millis>
+  <sequence>26</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>startUpSites</method>
+  <thread>1</thread>
+  <message>Processing sites.</message>
+</record>
+<record>
+  <date>2013-05-28T10:04:45</date>
+  <millis>1369749885770</millis>
+  <sequence>27</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>startUpSites</method>
+  <thread>1</thread>
+  <message>Processing sites.</message>
+</record>
+<record>
+  <date>2013-05-28T10:04:45</date>
+  <millis>1369749885771</millis>
+  <sequence>28</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>startUpSites</method>
+  <thread>1</thread>
+  <message>Processing sites.</message>
+</record>
+<record>
+  <date>2013-05-28T10:04:45</date>
+  <millis>1369749885772</millis>
+  <sequence>29</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>startUpSites</method>
+  <thread>1</thread>
+  <message>Processing sites.</message>
+</record>
+<record>
+  <date>2013-05-28T10:04:45</date>
+  <millis>1369749885773</millis>
+  <sequence>30</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>startUpSites</method>
+  <thread>1</thread>
+  <message>Processing sites.</message>
+</record>
+<record>
+  <date>2013-05-28T10:04:45</date>
+  <millis>1369749885774</millis>
+  <sequence>31</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>startUpSites</method>
+  <thread>1</thread>
+  <message>Processing sites.</message>
+</record>
+<record>
+  <date>2013-05-28T10:04:45</date>
+  <millis>1369749885775</millis>
+  <sequence>32</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>startUpSites</method>
+  <thread>1</thread>
+  <message>Processing sites.</message>
+</record>
+<record>
+  <date>2013-05-28T10:04:45</date>
+  <millis>1369749885776</millis>
+  <sequence>33</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>startUpSites</method>
+  <thread>1</thread>
+  <message>Processing sites.</message>
+</record>
+<record>
+  <date>2013-05-28T10:04:45</date>
+  <millis>1369749885777</millis>
+  <sequence>34</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>startUpSites</method>
+  <thread>1</thread>
+  <message>Processing sites.</message>
+</record>
+<record>
+  <date>2013-05-28T10:04:45</date>
+  <millis>1369749885778</millis>
+  <sequence>35</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>startUpSites</method>
+  <thread>1</thread>
+  <message>Processing sites.</message>
+</record>
+<record>
+  <date>2013-05-28T10:04:45</date>
+  <millis>1369749885779</millis>
+  <sequence>36</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>startUpSites</method>
+  <thread>1</thread>
+  <message>Processing sites.</message>
+</record>
+<record>
+  <date>2013-05-28T10:04:45</date>
+  <millis>1369749885781</millis>
+  <sequence>37</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>startUpSites</method>
+  <thread>1</thread>
+  <message>Processing sites.</message>
+</record>
+<record>
+  <date>2013-05-28T10:04:45</date>
+  <millis>1369749885782</millis>
+  <sequence>38</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>startUpSites</method>
+  <thread>1</thread>
+  <message>Processing sites.</message>
+</record>
+<record>
+  <date>2013-05-28T10:04:45</date>
+  <millis>1369749885782</millis>
+  <sequence>39</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>startUpSites</method>
+  <thread>1</thread>
+  <message>Processing sites.</message>
+</record>
+<record>
+  <date>2013-05-28T10:04:45</date>
+  <millis>1369749885784</millis>
+  <sequence>40</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>startUpSites</method>
+  <thread>1</thread>
+  <message>Processing sites.</message>
+</record>
+<record>
+  <date>2013-05-28T10:04:45</date>
+  <millis>1369749885785</millis>
+  <sequence>41</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>startUpSites</method>
+  <thread>1</thread>
+  <message>Processing sites.</message>
+</record>
+<record>
+  <date>2013-05-28T10:04:45</date>
+  <millis>1369749885786</millis>
+  <sequence>42</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>startUpSites</method>
+  <thread>1</thread>
+  <message>Processing sites.</message>
+</record>
+<record>
+  <date>2013-05-28T10:04:45</date>
+  <millis>1369749885790</millis>
+  <sequence>43</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>&lt;init&gt;</method>
+  <thread>1</thread>
+  <message>Started Client Listening Thread.</message>
+</record>
+<record>
+  <date>2013-05-28T10:04:45</date>
+  <millis>1369749885793</millis>
+  <sequence>44</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>startChecking</method>
+  <thread>1</thread>
+  <message>Started Client Listening Thread with initial delay of: 5 and continual delay of 5</message>
 </record>
 </log>

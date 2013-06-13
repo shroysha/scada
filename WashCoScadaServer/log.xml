@@ -1,0 +1,3462 @@
+<?xml version="1.0" encoding="US-ASCII" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2013-05-28T14:28:44</date>
+  <millis>1369765724031</millis>
+  <sequence>0</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADARunner</class>
+  <method>dispatch</method>
+  <thread>1</thread>
+  <message>Hai</message>
+</record>
+<record>
+  <date>2013-05-28T14:28:47</date>
+  <millis>1369765727767</millis>
+  <sequence>2</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>&lt;init&gt;</method>
+  <thread>1</thread>
+  <message>Starting up sites.</message>
+</record>
+<record>
+  <date>2013-05-28T14:28:47</date>
+  <millis>1369765727790</millis>
+  <sequence>3</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>startUpSites</method>
+  <thread>1</thread>
+  <message>Processing line: ###########################################################</message>
+</record>
+<record>
+  <date>2013-05-28T14:28:47</date>
+  <millis>1369765727792</millis>
+  <sequence>4</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>startUpSites</method>
+  <thread>1</thread>
+  <message>Processing line: #</message>
+</record>
+<record>
+  <date>2013-05-28T14:28:47</date>
+  <millis>1369765727794</millis>
+  <sequence>5</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>startUpSites</method>
+  <thread>1</thread>
+  <message>Processing line: #   SiteConfigs.dat</message>
+</record>
+<record>
+  <date>2013-05-28T14:28:47</date>
+  <millis>1369765727795</millis>
+  <sequence>6</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>startUpSites</method>
+  <thread>1</thread>
+  <message>Processing line: #   Author: Peter O'Connor</message>
+</record>
+<record>
+  <date>2013-05-28T14:28:47</date>
+  <millis>1369765727796</millis>
+  <sequence>7</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>startUpSites</method>
+  <thread>1</thread>
+  <message>Processing line: #   See Readme.txt for more information on formatting.</message>
+</record>
+<record>
+  <date>2013-05-28T14:28:47</date>
+  <millis>1369765727797</millis>
+  <sequence>8</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>startUpSites</method>
+  <thread>1</thread>
+  <message>Processing line: #   </message>
+</record>
+<record>
+  <date>2013-05-28T14:28:47</date>
+  <millis>1369765727798</millis>
+  <sequence>9</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>startUpSites</method>
+  <thread>1</thread>
+  <message>Processing line: ############################################################</message>
+</record>
+<record>
+  <date>2013-05-28T14:28:47</date>
+  <millis>1369765727799</millis>
+  <sequence>10</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>startUpSites</method>
+  <thread>1</thread>
+  <message>Processing line: </message>
+</record>
+<record>
+  <date>2013-05-28T14:28:47</date>
+  <millis>1369765727800</millis>
+  <sequence>11</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>startUpSites</method>
+  <thread>1</thread>
+  <message>Processing line: Site Name=Airport PS</message>
+</record>
+<record>
+  <date>2013-05-28T14:28:47</date>
+  <millis>1369765727801</millis>
+  <sequence>12</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>startUpSites</method>
+  <thread>1</thread>
+  <message>Processing line: Lat=162</message>
+</record>
+<record>
+  <date>2013-05-28T14:28:47</date>
+  <millis>1369765727802</millis>
+  <sequence>13</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>startUpSites</method>
+  <thread>1</thread>
+  <message>Processing line: Long=600</message>
+</record>
+<record>
+  <date>2013-05-28T14:28:47</date>
+  <millis>1369765727803</millis>
+  <sequence>14</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>startUpSites</method>
+  <thread>1</thread>
+  <message>Processing line: Device Name=Radio</message>
+</record>
+<record>
+  <date>2013-05-28T14:28:47</date>
+  <millis>1369765727805</millis>
+  <sequence>15</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>startUpSites</method>
+  <thread>1</thread>
+  <message>Processing line: </message>
+</record>
+<record>
+  <date>2013-05-28T14:28:47</date>
+  <millis>1369765727806</millis>
+  <sequence>16</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>startUpSites</method>
+  <thread>1</thread>
+  <message>Processing line: Device Name=Switch</message>
+</record>
+<record>
+  <date>2013-05-28T14:28:47</date>
+  <millis>1369765727807</millis>
+  <sequence>17</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>startUpSites</method>
+  <thread>1</thread>
+  <message>Processing line: </message>
+</record>
+<record>
+  <date>2013-05-28T14:28:47</date>
+  <millis>1369765727809</millis>
+  <sequence>18</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>startUpSites</method>
+  <thread>1</thread>
+  <message>Processing line: Device Name=SCADA Controller</message>
+</record>
+<record>
+  <date>2013-05-28T14:28:47</date>
+  <millis>1369765727811</millis>
+  <sequence>19</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>startUpSites</method>
+  <thread>1</thread>
+  <message>Processing line: end</message>
+</record>
+<record>
+  <date>2013-05-28T14:28:47</date>
+  <millis>1369765727812</millis>
+  <sequence>20</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>startUpSites</method>
+  <thread>1</thread>
+  <message>Reached end of site!</message>
+</record>
+<record>
+  <date>2013-05-28T14:28:47</date>
+  <millis>1369765727815</millis>
+  <sequence>21</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>startUpSites</method>
+  <thread>1</thread>
+  <message>Processing line: </message>
+</record>
+<record>
+  <date>2013-05-28T14:28:47</date>
+  <millis>1369765727816</millis>
+  <sequence>22</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>startUpSites</method>
+  <thread>1</thread>
+  <message>Processing line: #DeviceName=Touch Screen</message>
+</record>
+<record>
+  <date>2013-05-28T14:28:47</date>
+  <millis>1369765727817</millis>
+  <sequence>23</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>startUpSites</method>
+  <thread>1</thread>
+  <message>Processing line: #TCPIP=192.168.10.11</message>
+</record>
+<record>
+  <date>2013-05-28T14:28:47</date>
+  <millis>1369765727818</millis>
+  <sequence>24</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>startUpSites</method>
+  <thread>1</thread>
+  <message>Processing line: #Modbus=1</message>
+</record>
+<record>
+  <date>2013-05-28T14:28:47</date>
+  <millis>1369765727819</millis>
+  <sequence>25</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>startUpSites</method>
+  <thread>1</thread>
+  <message>Processing line: #Discretes=Pump:10001w,Relay:10002w,Power:10003c</message>
+</record>
+<record>
+  <date>2013-05-28T14:28:47</date>
+  <millis>1369765727820</millis>
+  <sequence>26</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>startUpSites</method>
+  <thread>1</thread>
+  <message>Processing line: #Registers=Level:30001c</message>
+</record>
+<record>
+  <date>2013-05-28T14:28:47</date>
+  <millis>1369765727821</millis>
+  <sequence>27</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>startUpSites</method>
+  <thread>1</thread>
+  <message>Processing line: </message>
+</record>
+<record>
+  <date>2013-05-28T14:28:47</date>
+  <millis>1369765727822</millis>
+  <sequence>28</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>startUpSites</method>
+  <thread>1</thread>
+  <message>Processing line: #Site Name=OCTEst</message>
+</record>
+<record>
+  <date>2013-05-28T14:28:47</date>
+  <millis>1369765727823</millis>
+  <sequence>29</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>startUpSites</method>
+  <thread>1</thread>
+  <message>Processing line: #Lat=39.720499</message>
+</record>
+<record>
+  <date>2013-05-28T14:28:47</date>
+  <millis>1369765727824</millis>
+  <sequence>30</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>startUpSites</method>
+  <thread>1</thread>
+  <message>Processing line: #Long=-80.783203</message>
+</record>
+<record>
+  <date>2013-05-28T14:28:47</date>
+  <millis>1369765727825</millis>
+  <sequence>31</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>startUpSites</method>
+  <thread>1</thread>
+  <message>Processing line: </message>
+</record>
+<record>
+  <date>2013-05-28T14:28:47</date>
+  <millis>1369765727826</millis>
+  <sequence>32</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>startUpSites</method>
+  <thread>1</thread>
+  <message>Processing line: #Device Name=Radio</message>
+</record>
+<record>
+  <date>2013-05-28T14:28:47</date>
+  <millis>1369765727827</millis>
+  <sequence>33</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>startUpSites</method>
+  <thread>1</thread>
+  <message>Processing line: #TCPIP=192.168.10.21</message>
+</record>
+<record>
+  <date>2013-05-28T14:28:47</date>
+  <millis>1369765727829</millis>
+  <sequence>34</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>startUpSites</method>
+  <thread>1</thread>
+  <message>Processing line: #Modbus=0</message>
+</record>
+<record>
+  <date>2013-05-28T14:28:47</date>
+  <millis>1369765727830</millis>
+  <sequence>35</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>startUpSites</method>
+  <thread>1</thread>
+  <message>Processing line: #Discretes=</message>
+</record>
+<record>
+  <date>2013-05-28T14:28:47</date>
+  <millis>1369765727832</millis>
+  <sequence>36</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>startUpSites</method>
+  <thread>1</thread>
+  <message>Processing line: #Registers=</message>
+</record>
+<record>
+  <date>2013-05-28T14:28:47</date>
+  <millis>1369765727833</millis>
+  <sequence>37</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>startUpSites</method>
+  <thread>1</thread>
+  <message>Processing line: </message>
+</record>
+<record>
+  <date>2013-05-28T14:28:47</date>
+  <millis>1369765727834</millis>
+  <sequence>38</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>startUpSites</method>
+  <thread>1</thread>
+  <message>Processing line: #Device Name=Touch Screen</message>
+</record>
+<record>
+  <date>2013-05-28T14:28:47</date>
+  <millis>1369765727835</millis>
+  <sequence>39</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>startUpSites</method>
+  <thread>1</thread>
+  <message>Processing line: #TCPIP=192.168.10.20</message>
+</record>
+<record>
+  <date>2013-05-28T14:28:47</date>
+  <millis>1369765727836</millis>
+  <sequence>40</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>startUpSites</method>
+  <thread>1</thread>
+  <message>Processing line: #Modbus=1</message>
+</record>
+<record>
+  <date>2013-05-28T14:28:47</date>
+  <millis>1369765727837</millis>
+  <sequence>41</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>startUpSites</method>
+  <thread>1</thread>
+  <message>Processing line: #Discretes=Pump:10001w,Relay:10002n,Power:10003c</message>
+</record>
+<record>
+  <date>2013-05-28T14:28:47</date>
+  <millis>1369765727838</millis>
+  <sequence>42</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>startUpSites</method>
+  <thread>1</thread>
+  <message>Processing line: #Registers=Level:30001c</message>
+</record>
+<record>
+  <date>2013-05-28T14:28:47</date>
+  <millis>1369765727839</millis>
+  <sequence>43</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>startUpSites</method>
+  <thread>1</thread>
+  <message>Processing line: #end</message>
+</record>
+<record>
+  <date>2013-05-28T14:28:47</date>
+  <millis>1369765727843</millis>
+  <sequence>44</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>&lt;init&gt;</method>
+  <thread>1</thread>
+  <message>Started Client Listening Thread.</message>
+</record>
+<record>
+  <date>2013-05-28T14:28:47</date>
+  <millis>1369765727847</millis>
+  <sequence>45</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>startChecking</method>
+  <thread>1</thread>
+  <message>Started Alarm Listening Thread with initial delay of: 5 and continual delay of 5</message>
+</record>
+<record>
+  <date>2013-05-28T14:28:52</date>
+  <millis>1369765732847</millis>
+  <sequence>46</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Started Checking at: 1,369,765,732</message>
+</record>
+<record>
+  <date>2013-05-28T14:28:52</date>
+  <millis>1369765732881</millis>
+  <sequence>47</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Stopped Checking at: 1,369,765,732</message>
+</record>
+<record>
+  <date>2013-05-28T14:28:52</date>
+  <millis>1369765732882</millis>
+  <sequence>48</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>Printing to clients.</message>
+</record>
+<record>
+  <date>2013-05-28T14:28:52</date>
+  <millis>1369765732883</millis>
+  <sequence>49</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Printed to all clients.</message>
+</record>
+<record>
+  <date>2013-05-28T14:28:52</date>
+  <millis>1369765732884</millis>
+  <sequence>50</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Removed all nonresponsive clients.</message>
+</record>
+<record>
+  <date>2013-05-28T14:28:57</date>
+  <millis>1369765737886</millis>
+  <sequence>51</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Started Checking at: 1,369,765,737</message>
+</record>
+<record>
+  <date>2013-05-28T14:28:57</date>
+  <millis>1369765737888</millis>
+  <sequence>52</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Stopped Checking at: 1,369,765,737</message>
+</record>
+<record>
+  <date>2013-05-28T14:28:57</date>
+  <millis>1369765737890</millis>
+  <sequence>53</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>Printing to clients.</message>
+</record>
+<record>
+  <date>2013-05-28T14:28:57</date>
+  <millis>1369765737891</millis>
+  <sequence>54</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Printed to all clients.</message>
+</record>
+<record>
+  <date>2013-05-28T14:28:57</date>
+  <millis>1369765737892</millis>
+  <sequence>55</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Removed all nonresponsive clients.</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:00</date>
+  <millis>1369765740946</millis>
+  <sequence>56</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer$ClientConnector</class>
+  <method>run</method>
+  <thread>16</thread>
+  <message>Client at: 127.0.0.1</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:02</date>
+  <millis>1369765742895</millis>
+  <sequence>57</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Started Checking at: 1,369,765,742</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:02</date>
+  <millis>1369765742897</millis>
+  <sequence>58</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Stopped Checking at: 1,369,765,742</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:02</date>
+  <millis>1369765742898</millis>
+  <sequence>59</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>Printing to clients.</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:02</date>
+  <millis>1369765742900</millis>
+  <sequence>60</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>Printing to client:127.0.0.1</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:02</date>
+  <millis>1369765742901</millis>
+  <sequence>61</sequence>
+  <logger>global</logger>
+  <level>FINE</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>Airport PS
+600.0162.0
+[
+
+Name: Radio
+IP: /192.168.41.28
+ModBus Enabled: false, 
+
+Name: Switch
+IP: /192.168.41.29
+ModBus Enabled: false, 
+
+Name: SCADA Controller
+IP: /192.168.41.30
+ModBus Enabled: true]</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:03</date>
+  <millis>1369765743069</millis>
+  <sequence>62</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>Sent to client: 127.0.0.1</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:03</date>
+  <millis>1369765743070</millis>
+  <sequence>63</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Printed to all clients.</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:03</date>
+  <millis>1369765743072</millis>
+  <sequence>64</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Removed all nonresponsive clients.</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:08</date>
+  <millis>1369765748076</millis>
+  <sequence>65</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Started Checking at: 1,369,765,748</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:08</date>
+  <millis>1369765748080</millis>
+  <sequence>66</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Stopped Checking at: 1,369,765,748</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:08</date>
+  <millis>1369765748083</millis>
+  <sequence>67</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>Printing to clients.</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:08</date>
+  <millis>1369765748084</millis>
+  <sequence>68</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>Printing to client:127.0.0.1</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:08</date>
+  <millis>1369765748086</millis>
+  <sequence>69</sequence>
+  <logger>global</logger>
+  <level>FINE</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>Airport PS
+600.0162.0
+[
+
+Name: Radio
+IP: /192.168.41.28
+ModBus Enabled: false, 
+
+Name: Switch
+IP: /192.168.41.29
+ModBus Enabled: false, 
+
+Name: SCADA Controller
+IP: /192.168.41.30
+ModBus Enabled: true]</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:08</date>
+  <millis>1369765748115</millis>
+  <sequence>70</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>Sent to client: 127.0.0.1</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:08</date>
+  <millis>1369765748118</millis>
+  <sequence>71</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Printed to all clients.</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:08</date>
+  <millis>1369765748119</millis>
+  <sequence>72</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Removed all nonresponsive clients.</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:13</date>
+  <millis>1369765753122</millis>
+  <sequence>73</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Started Checking at: 1,369,765,753</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:13</date>
+  <millis>1369765753124</millis>
+  <sequence>74</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Stopped Checking at: 1,369,765,753</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:13</date>
+  <millis>1369765753126</millis>
+  <sequence>75</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>Printing to clients.</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:13</date>
+  <millis>1369765753127</millis>
+  <sequence>76</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>Printing to client:127.0.0.1</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:13</date>
+  <millis>1369765753129</millis>
+  <sequence>77</sequence>
+  <logger>global</logger>
+  <level>FINE</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>Airport PS
+600.0162.0
+[
+
+Name: Radio
+IP: /192.168.41.28
+ModBus Enabled: false, 
+
+Name: Switch
+IP: /192.168.41.29
+ModBus Enabled: false, 
+
+Name: SCADA Controller
+IP: /192.168.41.30
+ModBus Enabled: true]</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:13</date>
+  <millis>1369765753162</millis>
+  <sequence>78</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>Sent to client: 127.0.0.1</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:13</date>
+  <millis>1369765753169</millis>
+  <sequence>79</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Printed to all clients.</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:13</date>
+  <millis>1369765753172</millis>
+  <sequence>80</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Removed all nonresponsive clients.</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:18</date>
+  <millis>1369765758175</millis>
+  <sequence>81</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Started Checking at: 1,369,765,758</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:18</date>
+  <millis>1369765758178</millis>
+  <sequence>82</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Stopped Checking at: 1,369,765,758</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:18</date>
+  <millis>1369765758179</millis>
+  <sequence>83</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>Printing to clients.</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:18</date>
+  <millis>1369765758180</millis>
+  <sequence>84</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>Printing to client:127.0.0.1</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:18</date>
+  <millis>1369765758182</millis>
+  <sequence>85</sequence>
+  <logger>global</logger>
+  <level>FINE</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>Airport PS
+600.0162.0
+[
+
+Name: Radio
+IP: /192.168.41.28
+ModBus Enabled: false, 
+
+Name: Switch
+IP: /192.168.41.29
+ModBus Enabled: false, 
+
+Name: SCADA Controller
+IP: /192.168.41.30
+ModBus Enabled: true]</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:18</date>
+  <millis>1369765758197</millis>
+  <sequence>86</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>Sent to client: 127.0.0.1</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:18</date>
+  <millis>1369765758207</millis>
+  <sequence>87</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Printed to all clients.</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:18</date>
+  <millis>1369765758209</millis>
+  <sequence>88</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Removed all nonresponsive clients.</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:23</date>
+  <millis>1369765763212</millis>
+  <sequence>89</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Started Checking at: 1,369,765,763</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:23</date>
+  <millis>1369765763214</millis>
+  <sequence>90</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Stopped Checking at: 1,369,765,763</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:23</date>
+  <millis>1369765763215</millis>
+  <sequence>91</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>Printing to clients.</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:23</date>
+  <millis>1369765763217</millis>
+  <sequence>92</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>Printing to client:127.0.0.1</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:23</date>
+  <millis>1369765763218</millis>
+  <sequence>93</sequence>
+  <logger>global</logger>
+  <level>FINE</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>Airport PS
+600.0162.0
+[
+
+Name: Radio
+IP: /192.168.41.28
+ModBus Enabled: false, 
+
+Name: Switch
+IP: /192.168.41.29
+ModBus Enabled: false, 
+
+Name: SCADA Controller
+IP: /192.168.41.30
+ModBus Enabled: true]</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:23</date>
+  <millis>1369765763229</millis>
+  <sequence>94</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>Sent to client: 127.0.0.1</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:23</date>
+  <millis>1369765763230</millis>
+  <sequence>95</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Printed to all clients.</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:23</date>
+  <millis>1369765763231</millis>
+  <sequence>96</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Removed all nonresponsive clients.</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:28</date>
+  <millis>1369765768241</millis>
+  <sequence>97</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Started Checking at: 1,369,765,768</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:28</date>
+  <millis>1369765768243</millis>
+  <sequence>98</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Stopped Checking at: 1,369,765,768</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:28</date>
+  <millis>1369765768243</millis>
+  <sequence>99</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>Printing to clients.</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:28</date>
+  <millis>1369765768244</millis>
+  <sequence>100</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>Printing to client:127.0.0.1</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:28</date>
+  <millis>1369765768245</millis>
+  <sequence>101</sequence>
+  <logger>global</logger>
+  <level>FINE</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>Airport PS
+600.0162.0
+[
+
+Name: Radio
+IP: /192.168.41.28
+ModBus Enabled: false, 
+
+Name: Switch
+IP: /192.168.41.29
+ModBus Enabled: false, 
+
+Name: SCADA Controller
+IP: /192.168.41.30
+ModBus Enabled: true]</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:28</date>
+  <millis>1369765768248</millis>
+  <sequence>102</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>Printing to client:127.0.0.1 failed.</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:28</date>
+  <millis>1369765768249</millis>
+  <sequence>103</sequence>
+  <logger>global</logger>
+  <level>SEVERE</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>Broken pipe</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:28</date>
+  <millis>1369765768250</millis>
+  <sequence>104</sequence>
+  <logger>global</logger>
+  <level>SEVERE</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>java.net.SocketException: Broken pipe</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:28</date>
+  <millis>1369765768251</millis>
+  <sequence>105</sequence>
+  <logger>global</logger>
+  <level>SEVERE</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>Printing End Sites didn't work.</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:28</date>
+  <millis>1369765768252</millis>
+  <sequence>106</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Printed to all clients.</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:28</date>
+  <millis>1369765768253</millis>
+  <sequence>107</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Removed all nonresponsive clients.</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:33</date>
+  <millis>1369765773259</millis>
+  <sequence>108</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Started Checking at: 1,369,765,773</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:33</date>
+  <millis>1369765773261</millis>
+  <sequence>109</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Stopped Checking at: 1,369,765,773</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:33</date>
+  <millis>1369765773263</millis>
+  <sequence>110</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>Printing to clients.</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:33</date>
+  <millis>1369765773264</millis>
+  <sequence>111</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>Printing to client:127.0.0.1</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:33</date>
+  <millis>1369765773265</millis>
+  <sequence>112</sequence>
+  <logger>global</logger>
+  <level>FINE</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>Airport PS
+600.0162.0
+[
+
+Name: Radio
+IP: /192.168.41.28
+ModBus Enabled: false, 
+
+Name: Switch
+IP: /192.168.41.29
+ModBus Enabled: false, 
+
+Name: SCADA Controller
+IP: /192.168.41.30
+ModBus Enabled: true]</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:33</date>
+  <millis>1369765773265</millis>
+  <sequence>113</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>Printing to client:127.0.0.1 failed.</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:33</date>
+  <millis>1369765773266</millis>
+  <sequence>114</sequence>
+  <logger>global</logger>
+  <level>SEVERE</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>Broken pipe</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:33</date>
+  <millis>1369765773268</millis>
+  <sequence>115</sequence>
+  <logger>global</logger>
+  <level>SEVERE</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>java.net.SocketException: Broken pipe</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:33</date>
+  <millis>1369765773269</millis>
+  <sequence>116</sequence>
+  <logger>global</logger>
+  <level>SEVERE</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>Printing End Sites didn't work.</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:33</date>
+  <millis>1369765773270</millis>
+  <sequence>117</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Printed to all clients.</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:33</date>
+  <millis>1369765773271</millis>
+  <sequence>118</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Removed all nonresponsive clients.</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:38</date>
+  <millis>1369765778273</millis>
+  <sequence>119</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Started Checking at: 1,369,765,778</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:38</date>
+  <millis>1369765778276</millis>
+  <sequence>120</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Stopped Checking at: 1,369,765,778</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:38</date>
+  <millis>1369765778277</millis>
+  <sequence>121</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>Printing to clients.</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:38</date>
+  <millis>1369765778278</millis>
+  <sequence>122</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>Printing to client:127.0.0.1</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:38</date>
+  <millis>1369765778279</millis>
+  <sequence>123</sequence>
+  <logger>global</logger>
+  <level>FINE</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>Airport PS
+600.0162.0
+[
+
+Name: Radio
+IP: /192.168.41.28
+ModBus Enabled: false, 
+
+Name: Switch
+IP: /192.168.41.29
+ModBus Enabled: false, 
+
+Name: SCADA Controller
+IP: /192.168.41.30
+ModBus Enabled: true]</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:38</date>
+  <millis>1369765778279</millis>
+  <sequence>124</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>Printing to client:127.0.0.1 failed.</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:38</date>
+  <millis>1369765778280</millis>
+  <sequence>125</sequence>
+  <logger>global</logger>
+  <level>SEVERE</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>Broken pipe</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:38</date>
+  <millis>1369765778281</millis>
+  <sequence>126</sequence>
+  <logger>global</logger>
+  <level>SEVERE</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>java.net.SocketException: Broken pipe</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:38</date>
+  <millis>1369765778282</millis>
+  <sequence>127</sequence>
+  <logger>global</logger>
+  <level>SEVERE</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>Printing End Sites didn't work.</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:38</date>
+  <millis>1369765778283</millis>
+  <sequence>128</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Printed to all clients.</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:38</date>
+  <millis>1369765778283</millis>
+  <sequence>129</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Removed all nonresponsive clients.</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:43</date>
+  <millis>1369765783285</millis>
+  <sequence>130</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Started Checking at: 1,369,765,783</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:43</date>
+  <millis>1369765783287</millis>
+  <sequence>131</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Stopped Checking at: 1,369,765,783</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:43</date>
+  <millis>1369765783288</millis>
+  <sequence>132</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>Printing to clients.</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:43</date>
+  <millis>1369765783290</millis>
+  <sequence>133</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>Printing to client:127.0.0.1</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:43</date>
+  <millis>1369765783291</millis>
+  <sequence>134</sequence>
+  <logger>global</logger>
+  <level>FINE</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>Airport PS
+600.0162.0
+[
+
+Name: Radio
+IP: /192.168.41.28
+ModBus Enabled: false, 
+
+Name: Switch
+IP: /192.168.41.29
+ModBus Enabled: false, 
+
+Name: SCADA Controller
+IP: /192.168.41.30
+ModBus Enabled: true]</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:43</date>
+  <millis>1369765783291</millis>
+  <sequence>135</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>Printing to client:127.0.0.1 failed.</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:43</date>
+  <millis>1369765783292</millis>
+  <sequence>136</sequence>
+  <logger>global</logger>
+  <level>SEVERE</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>Broken pipe</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:43</date>
+  <millis>1369765783293</millis>
+  <sequence>137</sequence>
+  <logger>global</logger>
+  <level>SEVERE</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>java.net.SocketException: Broken pipe</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:43</date>
+  <millis>1369765783294</millis>
+  <sequence>138</sequence>
+  <logger>global</logger>
+  <level>SEVERE</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>Printing End Sites didn't work.</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:43</date>
+  <millis>1369765783295</millis>
+  <sequence>139</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Printed to all clients.</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:43</date>
+  <millis>1369765783296</millis>
+  <sequence>140</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Removed all nonresponsive clients.</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:48</date>
+  <millis>1369765788298</millis>
+  <sequence>141</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Started Checking at: 1,369,765,788</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:48</date>
+  <millis>1369765788301</millis>
+  <sequence>142</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Stopped Checking at: 1,369,765,788</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:48</date>
+  <millis>1369765788302</millis>
+  <sequence>143</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>Printing to clients.</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:48</date>
+  <millis>1369765788303</millis>
+  <sequence>144</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>Printing to client:127.0.0.1</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:48</date>
+  <millis>1369765788304</millis>
+  <sequence>145</sequence>
+  <logger>global</logger>
+  <level>FINE</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>Airport PS
+600.0162.0
+[
+
+Name: Radio
+IP: /192.168.41.28
+ModBus Enabled: false, 
+
+Name: Switch
+IP: /192.168.41.29
+ModBus Enabled: false, 
+
+Name: SCADA Controller
+IP: /192.168.41.30
+ModBus Enabled: true]</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:48</date>
+  <millis>1369765788304</millis>
+  <sequence>146</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>Printing to client:127.0.0.1 failed.</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:48</date>
+  <millis>1369765788305</millis>
+  <sequence>147</sequence>
+  <logger>global</logger>
+  <level>SEVERE</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>Broken pipe</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:48</date>
+  <millis>1369765788306</millis>
+  <sequence>148</sequence>
+  <logger>global</logger>
+  <level>SEVERE</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>java.net.SocketException: Broken pipe</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:48</date>
+  <millis>1369765788307</millis>
+  <sequence>149</sequence>
+  <logger>global</logger>
+  <level>SEVERE</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>Printing End Sites didn't work.</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:48</date>
+  <millis>1369765788308</millis>
+  <sequence>150</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Printed to all clients.</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:48</date>
+  <millis>1369765788309</millis>
+  <sequence>151</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Removed all nonresponsive clients.</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:53</date>
+  <millis>1369765793311</millis>
+  <sequence>152</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Started Checking at: 1,369,765,793</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:53</date>
+  <millis>1369765793313</millis>
+  <sequence>153</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Stopped Checking at: 1,369,765,793</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:53</date>
+  <millis>1369765793314</millis>
+  <sequence>154</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>Printing to clients.</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:53</date>
+  <millis>1369765793315</millis>
+  <sequence>155</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>Printing to client:127.0.0.1</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:53</date>
+  <millis>1369765793316</millis>
+  <sequence>156</sequence>
+  <logger>global</logger>
+  <level>FINE</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>Airport PS
+600.0162.0
+[
+
+Name: Radio
+IP: /192.168.41.28
+ModBus Enabled: false, 
+
+Name: Switch
+IP: /192.168.41.29
+ModBus Enabled: false, 
+
+Name: SCADA Controller
+IP: /192.168.41.30
+ModBus Enabled: true]</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:53</date>
+  <millis>1369765793316</millis>
+  <sequence>157</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>Printing to client:127.0.0.1 failed.</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:53</date>
+  <millis>1369765793317</millis>
+  <sequence>158</sequence>
+  <logger>global</logger>
+  <level>SEVERE</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>Broken pipe</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:53</date>
+  <millis>1369765793318</millis>
+  <sequence>159</sequence>
+  <logger>global</logger>
+  <level>SEVERE</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>java.net.SocketException: Broken pipe</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:53</date>
+  <millis>1369765793319</millis>
+  <sequence>160</sequence>
+  <logger>global</logger>
+  <level>SEVERE</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>Printing End Sites didn't work.</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:53</date>
+  <millis>1369765793320</millis>
+  <sequence>161</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Printed to all clients.</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:53</date>
+  <millis>1369765793321</millis>
+  <sequence>162</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Removed all nonresponsive clients.</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:58</date>
+  <millis>1369765798327</millis>
+  <sequence>163</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Started Checking at: 1,369,765,798</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:58</date>
+  <millis>1369765798329</millis>
+  <sequence>164</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Stopped Checking at: 1,369,765,798</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:58</date>
+  <millis>1369765798329</millis>
+  <sequence>165</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>Printing to clients.</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:58</date>
+  <millis>1369765798330</millis>
+  <sequence>166</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>Printing to client:127.0.0.1</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:58</date>
+  <millis>1369765798331</millis>
+  <sequence>167</sequence>
+  <logger>global</logger>
+  <level>FINE</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>Airport PS
+600.0162.0
+[
+
+Name: Radio
+IP: /192.168.41.28
+ModBus Enabled: false, 
+
+Name: Switch
+IP: /192.168.41.29
+ModBus Enabled: false, 
+
+Name: SCADA Controller
+IP: /192.168.41.30
+ModBus Enabled: true]</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:58</date>
+  <millis>1369765798331</millis>
+  <sequence>168</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>Printing to client:127.0.0.1 failed.</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:58</date>
+  <millis>1369765798331</millis>
+  <sequence>169</sequence>
+  <logger>global</logger>
+  <level>SEVERE</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>Broken pipe</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:58</date>
+  <millis>1369765798332</millis>
+  <sequence>170</sequence>
+  <logger>global</logger>
+  <level>SEVERE</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>java.net.SocketException: Broken pipe</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:58</date>
+  <millis>1369765798333</millis>
+  <sequence>171</sequence>
+  <logger>global</logger>
+  <level>SEVERE</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>Printing End Sites didn't work.</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:58</date>
+  <millis>1369765798333</millis>
+  <sequence>172</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Printed to all clients.</message>
+</record>
+<record>
+  <date>2013-05-28T14:29:58</date>
+  <millis>1369765798334</millis>
+  <sequence>173</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Removed all nonresponsive clients.</message>
+</record>
+<record>
+  <date>2013-05-28T14:30:03</date>
+  <millis>1369765803335</millis>
+  <sequence>174</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Started Checking at: 1,369,765,803</message>
+</record>
+<record>
+  <date>2013-05-28T14:30:03</date>
+  <millis>1369765803338</millis>
+  <sequence>175</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Stopped Checking at: 1,369,765,803</message>
+</record>
+<record>
+  <date>2013-05-28T14:30:03</date>
+  <millis>1369765803339</millis>
+  <sequence>176</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>Printing to clients.</message>
+</record>
+<record>
+  <date>2013-05-28T14:30:03</date>
+  <millis>1369765803340</millis>
+  <sequence>177</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>Printing to client:127.0.0.1</message>
+</record>
+<record>
+  <date>2013-05-28T14:30:03</date>
+  <millis>1369765803340</millis>
+  <sequence>178</sequence>
+  <logger>global</logger>
+  <level>FINE</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>Airport PS
+600.0162.0
+[
+
+Name: Radio
+IP: /192.168.41.28
+ModBus Enabled: false, 
+
+Name: Switch
+IP: /192.168.41.29
+ModBus Enabled: false, 
+
+Name: SCADA Controller
+IP: /192.168.41.30
+ModBus Enabled: true]</message>
+</record>
+<record>
+  <date>2013-05-28T14:30:03</date>
+  <millis>1369765803341</millis>
+  <sequence>179</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>Printing to client:127.0.0.1 failed.</message>
+</record>
+<record>
+  <date>2013-05-28T14:30:03</date>
+  <millis>1369765803342</millis>
+  <sequence>180</sequence>
+  <logger>global</logger>
+  <level>SEVERE</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>Broken pipe</message>
+</record>
+<record>
+  <date>2013-05-28T14:30:03</date>
+  <millis>1369765803342</millis>
+  <sequence>181</sequence>
+  <logger>global</logger>
+  <level>SEVERE</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>java.net.SocketException: Broken pipe</message>
+</record>
+<record>
+  <date>2013-05-28T14:30:03</date>
+  <millis>1369765803343</millis>
+  <sequence>182</sequence>
+  <logger>global</logger>
+  <level>SEVERE</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>Printing End Sites didn't work.</message>
+</record>
+<record>
+  <date>2013-05-28T14:30:03</date>
+  <millis>1369765803344</millis>
+  <sequence>183</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Printed to all clients.</message>
+</record>
+<record>
+  <date>2013-05-28T14:30:03</date>
+  <millis>1369765803344</millis>
+  <sequence>184</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Removed all nonresponsive clients.</message>
+</record>
+<record>
+  <date>2013-05-28T14:30:08</date>
+  <millis>1369765808346</millis>
+  <sequence>185</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Started Checking at: 1,369,765,808</message>
+</record>
+<record>
+  <date>2013-05-28T14:30:08</date>
+  <millis>1369765808349</millis>
+  <sequence>186</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Stopped Checking at: 1,369,765,808</message>
+</record>
+<record>
+  <date>2013-05-28T14:30:08</date>
+  <millis>1369765808350</millis>
+  <sequence>187</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>Printing to clients.</message>
+</record>
+<record>
+  <date>2013-05-28T14:30:08</date>
+  <millis>1369765808351</millis>
+  <sequence>188</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>Printing to client:127.0.0.1</message>
+</record>
+<record>
+  <date>2013-05-28T14:30:08</date>
+  <millis>1369765808352</millis>
+  <sequence>189</sequence>
+  <logger>global</logger>
+  <level>FINE</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>Airport PS
+600.0162.0
+[
+
+Name: Radio
+IP: /192.168.41.28
+ModBus Enabled: false, 
+
+Name: Switch
+IP: /192.168.41.29
+ModBus Enabled: false, 
+
+Name: SCADA Controller
+IP: /192.168.41.30
+ModBus Enabled: true]</message>
+</record>
+<record>
+  <date>2013-05-28T14:30:08</date>
+  <millis>1369765808352</millis>
+  <sequence>190</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>Printing to client:127.0.0.1 failed.</message>
+</record>
+<record>
+  <date>2013-05-28T14:30:08</date>
+  <millis>1369765808353</millis>
+  <sequence>191</sequence>
+  <logger>global</logger>
+  <level>SEVERE</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>Broken pipe</message>
+</record>
+<record>
+  <date>2013-05-28T14:30:08</date>
+  <millis>1369765808354</millis>
+  <sequence>192</sequence>
+  <logger>global</logger>
+  <level>SEVERE</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>java.net.SocketException: Broken pipe</message>
+</record>
+<record>
+  <date>2013-05-28T14:30:08</date>
+  <millis>1369765808355</millis>
+  <sequence>193</sequence>
+  <logger>global</logger>
+  <level>SEVERE</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>Printing End Sites didn't work.</message>
+</record>
+<record>
+  <date>2013-05-28T14:30:08</date>
+  <millis>1369765808355</millis>
+  <sequence>194</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Printed to all clients.</message>
+</record>
+<record>
+  <date>2013-05-28T14:30:08</date>
+  <millis>1369765808356</millis>
+  <sequence>195</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Removed all nonresponsive clients.</message>
+</record>
+<record>
+  <date>2013-05-28T14:30:13</date>
+  <millis>1369765813357</millis>
+  <sequence>196</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Started Checking at: 1,369,765,813</message>
+</record>
+<record>
+  <date>2013-05-28T14:30:13</date>
+  <millis>1369765813359</millis>
+  <sequence>197</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Stopped Checking at: 1,369,765,813</message>
+</record>
+<record>
+  <date>2013-05-28T14:30:13</date>
+  <millis>1369765813360</millis>
+  <sequence>198</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>Printing to clients.</message>
+</record>
+<record>
+  <date>2013-05-28T14:30:13</date>
+  <millis>1369765813360</millis>
+  <sequence>199</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>Printing to client:127.0.0.1</message>
+</record>
+<record>
+  <date>2013-05-28T14:30:13</date>
+  <millis>1369765813361</millis>
+  <sequence>200</sequence>
+  <logger>global</logger>
+  <level>FINE</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>Airport PS
+600.0162.0
+[
+
+Name: Radio
+IP: /192.168.41.28
+ModBus Enabled: false, 
+
+Name: Switch
+IP: /192.168.41.29
+ModBus Enabled: false, 
+
+Name: SCADA Controller
+IP: /192.168.41.30
+ModBus Enabled: true]</message>
+</record>
+<record>
+  <date>2013-05-28T14:30:13</date>
+  <millis>1369765813362</millis>
+  <sequence>201</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>Printing to client:127.0.0.1 failed.</message>
+</record>
+<record>
+  <date>2013-05-28T14:30:13</date>
+  <millis>1369765813362</millis>
+  <sequence>202</sequence>
+  <logger>global</logger>
+  <level>SEVERE</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>Broken pipe</message>
+</record>
+<record>
+  <date>2013-05-28T14:30:13</date>
+  <millis>1369765813363</millis>
+  <sequence>203</sequence>
+  <logger>global</logger>
+  <level>SEVERE</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>java.net.SocketException: Broken pipe</message>
+</record>
+<record>
+  <date>2013-05-28T14:30:13</date>
+  <millis>1369765813364</millis>
+  <sequence>204</sequence>
+  <logger>global</logger>
+  <level>SEVERE</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>Printing End Sites didn't work.</message>
+</record>
+<record>
+  <date>2013-05-28T14:30:13</date>
+  <millis>1369765813364</millis>
+  <sequence>205</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Printed to all clients.</message>
+</record>
+<record>
+  <date>2013-05-28T14:30:13</date>
+  <millis>1369765813365</millis>
+  <sequence>206</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Removed all nonresponsive clients.</message>
+</record>
+<record>
+  <date>2013-05-28T14:30:18</date>
+  <millis>1369765818367</millis>
+  <sequence>207</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Started Checking at: 1,369,765,818</message>
+</record>
+<record>
+  <date>2013-05-28T14:30:18</date>
+  <millis>1369765818369</millis>
+  <sequence>208</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Stopped Checking at: 1,369,765,818</message>
+</record>
+<record>
+  <date>2013-05-28T14:30:18</date>
+  <millis>1369765818370</millis>
+  <sequence>209</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>Printing to clients.</message>
+</record>
+<record>
+  <date>2013-05-28T14:30:18</date>
+  <millis>1369765818371</millis>
+  <sequence>210</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>Printing to client:127.0.0.1</message>
+</record>
+<record>
+  <date>2013-05-28T14:30:18</date>
+  <millis>1369765818372</millis>
+  <sequence>211</sequence>
+  <logger>global</logger>
+  <level>FINE</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>Airport PS
+600.0162.0
+[
+
+Name: Radio
+IP: /192.168.41.28
+ModBus Enabled: false, 
+
+Name: Switch
+IP: /192.168.41.29
+ModBus Enabled: false, 
+
+Name: SCADA Controller
+IP: /192.168.41.30
+ModBus Enabled: true]</message>
+</record>
+<record>
+  <date>2013-05-28T14:30:18</date>
+  <millis>1369765818372</millis>
+  <sequence>212</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>Printing to client:127.0.0.1 failed.</message>
+</record>
+<record>
+  <date>2013-05-28T14:30:18</date>
+  <millis>1369765818373</millis>
+  <sequence>213</sequence>
+  <logger>global</logger>
+  <level>SEVERE</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>Broken pipe</message>
+</record>
+<record>
+  <date>2013-05-28T14:30:18</date>
+  <millis>1369765818374</millis>
+  <sequence>214</sequence>
+  <logger>global</logger>
+  <level>SEVERE</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>java.net.SocketException: Broken pipe</message>
+</record>
+<record>
+  <date>2013-05-28T14:30:18</date>
+  <millis>1369765818375</millis>
+  <sequence>215</sequence>
+  <logger>global</logger>
+  <level>SEVERE</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>Printing End Sites didn't work.</message>
+</record>
+<record>
+  <date>2013-05-28T14:30:18</date>
+  <millis>1369765818376</millis>
+  <sequence>216</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Printed to all clients.</message>
+</record>
+<record>
+  <date>2013-05-28T14:30:18</date>
+  <millis>1369765818376</millis>
+  <sequence>217</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>removeClients</method>
+  <thread>17</thread>
+  <message>Removing: /127.0.0.1</message>
+</record>
+<record>
+  <date>2013-05-28T14:30:18</date>
+  <millis>1369765818377</millis>
+  <sequence>218</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Removed all nonresponsive clients.</message>
+</record>
+<record>
+  <date>2013-05-28T14:30:23</date>
+  <millis>1369765823379</millis>
+  <sequence>219</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Started Checking at: 1,369,765,823</message>
+</record>
+<record>
+  <date>2013-05-28T14:30:23</date>
+  <millis>1369765823381</millis>
+  <sequence>220</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Stopped Checking at: 1,369,765,823</message>
+</record>
+<record>
+  <date>2013-05-28T14:30:23</date>
+  <millis>1369765823382</millis>
+  <sequence>221</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>Printing to clients.</message>
+</record>
+<record>
+  <date>2013-05-28T14:30:23</date>
+  <millis>1369765823383</millis>
+  <sequence>222</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Printed to all clients.</message>
+</record>
+<record>
+  <date>2013-05-28T14:30:23</date>
+  <millis>1369765823384</millis>
+  <sequence>223</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Removed all nonresponsive clients.</message>
+</record>
+<record>
+  <date>2013-05-28T14:30:28</date>
+  <millis>1369765828386</millis>
+  <sequence>224</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Started Checking at: 1,369,765,828</message>
+</record>
+<record>
+  <date>2013-05-28T14:30:28</date>
+  <millis>1369765828389</millis>
+  <sequence>225</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Stopped Checking at: 1,369,765,828</message>
+</record>
+<record>
+  <date>2013-05-28T14:30:28</date>
+  <millis>1369765828391</millis>
+  <sequence>226</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>Printing to clients.</message>
+</record>
+<record>
+  <date>2013-05-28T14:30:28</date>
+  <millis>1369765828391</millis>
+  <sequence>227</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Printed to all clients.</message>
+</record>
+<record>
+  <date>2013-05-28T14:30:28</date>
+  <millis>1369765828392</millis>
+  <sequence>228</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Removed all nonresponsive clients.</message>
+</record>
+<record>
+  <date>2013-05-28T14:30:33</date>
+  <millis>1369765833395</millis>
+  <sequence>229</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Started Checking at: 1,369,765,833</message>
+</record>
+<record>
+  <date>2013-05-28T14:30:33</date>
+  <millis>1369765833397</millis>
+  <sequence>230</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Stopped Checking at: 1,369,765,833</message>
+</record>
+<record>
+  <date>2013-05-28T14:30:33</date>
+  <millis>1369765833399</millis>
+  <sequence>231</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>Printing to clients.</message>
+</record>
+<record>
+  <date>2013-05-28T14:30:33</date>
+  <millis>1369765833400</millis>
+  <sequence>232</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Printed to all clients.</message>
+</record>
+<record>
+  <date>2013-05-28T14:30:33</date>
+  <millis>1369765833400</millis>
+  <sequence>233</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Removed all nonresponsive clients.</message>
+</record>
+<record>
+  <date>2013-05-28T14:30:38</date>
+  <millis>1369765838402</millis>
+  <sequence>234</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Started Checking at: 1,369,765,838</message>
+</record>
+<record>
+  <date>2013-05-28T14:30:38</date>
+  <millis>1369765838403</millis>
+  <sequence>235</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Stopped Checking at: 1,369,765,838</message>
+</record>
+<record>
+  <date>2013-05-28T14:30:38</date>
+  <millis>1369765838404</millis>
+  <sequence>236</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>Printing to clients.</message>
+</record>
+<record>
+  <date>2013-05-28T14:30:38</date>
+  <millis>1369765838404</millis>
+  <sequence>237</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Printed to all clients.</message>
+</record>
+<record>
+  <date>2013-05-28T14:30:38</date>
+  <millis>1369765838405</millis>
+  <sequence>238</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Removed all nonresponsive clients.</message>
+</record>
+<record>
+  <date>2013-05-28T14:30:43</date>
+  <millis>1369765843410</millis>
+  <sequence>239</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Started Checking at: 1,369,765,843</message>
+</record>
+<record>
+  <date>2013-05-28T14:30:43</date>
+  <millis>1369765843411</millis>
+  <sequence>240</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Stopped Checking at: 1,369,765,843</message>
+</record>
+<record>
+  <date>2013-05-28T14:30:43</date>
+  <millis>1369765843412</millis>
+  <sequence>241</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>Printing to clients.</message>
+</record>
+<record>
+  <date>2013-05-28T14:30:43</date>
+  <millis>1369765843413</millis>
+  <sequence>242</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Printed to all clients.</message>
+</record>
+<record>
+  <date>2013-05-28T14:30:43</date>
+  <millis>1369765843414</millis>
+  <sequence>243</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Removed all nonresponsive clients.</message>
+</record>
+<record>
+  <date>2013-05-28T14:30:48</date>
+  <millis>1369765848415</millis>
+  <sequence>244</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Started Checking at: 1,369,765,848</message>
+</record>
+<record>
+  <date>2013-05-28T14:30:48</date>
+  <millis>1369765848418</millis>
+  <sequence>245</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Stopped Checking at: 1,369,765,848</message>
+</record>
+<record>
+  <date>2013-05-28T14:30:48</date>
+  <millis>1369765848419</millis>
+  <sequence>246</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>Printing to clients.</message>
+</record>
+<record>
+  <date>2013-05-28T14:30:48</date>
+  <millis>1369765848420</millis>
+  <sequence>247</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Printed to all clients.</message>
+</record>
+<record>
+  <date>2013-05-28T14:30:48</date>
+  <millis>1369765848420</millis>
+  <sequence>248</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Removed all nonresponsive clients.</message>
+</record>
+<record>
+  <date>2013-05-28T14:30:53</date>
+  <millis>1369765853422</millis>
+  <sequence>249</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Started Checking at: 1,369,765,853</message>
+</record>
+<record>
+  <date>2013-05-28T14:30:53</date>
+  <millis>1369765853424</millis>
+  <sequence>250</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Stopped Checking at: 1,369,765,853</message>
+</record>
+<record>
+  <date>2013-05-28T14:30:53</date>
+  <millis>1369765853424</millis>
+  <sequence>251</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>Printing to clients.</message>
+</record>
+<record>
+  <date>2013-05-28T14:30:53</date>
+  <millis>1369765853425</millis>
+  <sequence>252</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Printed to all clients.</message>
+</record>
+<record>
+  <date>2013-05-28T14:30:53</date>
+  <millis>1369765853426</millis>
+  <sequence>253</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Removed all nonresponsive clients.</message>
+</record>
+<record>
+  <date>2013-05-28T14:30:58</date>
+  <millis>1369765858428</millis>
+  <sequence>254</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Started Checking at: 1,369,765,858</message>
+</record>
+<record>
+  <date>2013-05-28T14:30:58</date>
+  <millis>1369765858430</millis>
+  <sequence>255</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Stopped Checking at: 1,369,765,858</message>
+</record>
+<record>
+  <date>2013-05-28T14:30:58</date>
+  <millis>1369765858431</millis>
+  <sequence>256</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>Printing to clients.</message>
+</record>
+<record>
+  <date>2013-05-28T14:30:58</date>
+  <millis>1369765858431</millis>
+  <sequence>257</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Printed to all clients.</message>
+</record>
+<record>
+  <date>2013-05-28T14:30:58</date>
+  <millis>1369765858432</millis>
+  <sequence>258</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Removed all nonresponsive clients.</message>
+</record>
+<record>
+  <date>2013-05-28T14:31:03</date>
+  <millis>1369765863433</millis>
+  <sequence>259</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Started Checking at: 1,369,765,863</message>
+</record>
+<record>
+  <date>2013-05-28T14:31:03</date>
+  <millis>1369765863436</millis>
+  <sequence>260</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Stopped Checking at: 1,369,765,863</message>
+</record>
+<record>
+  <date>2013-05-28T14:31:03</date>
+  <millis>1369765863437</millis>
+  <sequence>261</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>Printing to clients.</message>
+</record>
+<record>
+  <date>2013-05-28T14:31:03</date>
+  <millis>1369765863438</millis>
+  <sequence>262</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Printed to all clients.</message>
+</record>
+<record>
+  <date>2013-05-28T14:31:03</date>
+  <millis>1369765863439</millis>
+  <sequence>263</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Removed all nonresponsive clients.</message>
+</record>
+<record>
+  <date>2013-05-28T14:31:08</date>
+  <millis>1369765868441</millis>
+  <sequence>264</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Started Checking at: 1,369,765,868</message>
+</record>
+<record>
+  <date>2013-05-28T14:31:08</date>
+  <millis>1369765868443</millis>
+  <sequence>265</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Stopped Checking at: 1,369,765,868</message>
+</record>
+<record>
+  <date>2013-05-28T14:31:08</date>
+  <millis>1369765868443</millis>
+  <sequence>266</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>Printing to clients.</message>
+</record>
+<record>
+  <date>2013-05-28T14:31:08</date>
+  <millis>1369765868444</millis>
+  <sequence>267</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Printed to all clients.</message>
+</record>
+<record>
+  <date>2013-05-28T14:31:08</date>
+  <millis>1369765868444</millis>
+  <sequence>268</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Removed all nonresponsive clients.</message>
+</record>
+<record>
+  <date>2013-05-28T14:31:13</date>
+  <millis>1369765873446</millis>
+  <sequence>269</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Started Checking at: 1,369,765,873</message>
+</record>
+<record>
+  <date>2013-05-28T14:31:13</date>
+  <millis>1369765873449</millis>
+  <sequence>270</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Stopped Checking at: 1,369,765,873</message>
+</record>
+<record>
+  <date>2013-05-28T14:31:13</date>
+  <millis>1369765873450</millis>
+  <sequence>271</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>Printing to clients.</message>
+</record>
+<record>
+  <date>2013-05-28T14:31:13</date>
+  <millis>1369765873450</millis>
+  <sequence>272</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Printed to all clients.</message>
+</record>
+<record>
+  <date>2013-05-28T14:31:13</date>
+  <millis>1369765873451</millis>
+  <sequence>273</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Removed all nonresponsive clients.</message>
+</record>
+<record>
+  <date>2013-05-28T14:31:18</date>
+  <millis>1369765878453</millis>
+  <sequence>274</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Started Checking at: 1,369,765,878</message>
+</record>
+<record>
+  <date>2013-05-28T14:31:18</date>
+  <millis>1369765878455</millis>
+  <sequence>275</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Stopped Checking at: 1,369,765,878</message>
+</record>
+<record>
+  <date>2013-05-28T14:31:18</date>
+  <millis>1369765878456</millis>
+  <sequence>276</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>Printing to clients.</message>
+</record>
+<record>
+  <date>2013-05-28T14:31:18</date>
+  <millis>1369765878457</millis>
+  <sequence>277</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Printed to all clients.</message>
+</record>
+<record>
+  <date>2013-05-28T14:31:18</date>
+  <millis>1369765878458</millis>
+  <sequence>278</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Removed all nonresponsive clients.</message>
+</record>
+<record>
+  <date>2013-05-28T14:31:23</date>
+  <millis>1369765883460</millis>
+  <sequence>279</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Started Checking at: 1,369,765,883</message>
+</record>
+<record>
+  <date>2013-05-28T14:32:40</date>
+  <millis>1369765960150</millis>
+  <sequence>280</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Stopped Checking at: 1,369,765,960</message>
+</record>
+<record>
+  <date>2013-05-28T14:32:40</date>
+  <millis>1369765960152</millis>
+  <sequence>281</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>Printing to clients.</message>
+</record>
+<record>
+  <date>2013-05-28T14:32:40</date>
+  <millis>1369765960153</millis>
+  <sequence>282</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Printed to all clients.</message>
+</record>
+<record>
+  <date>2013-05-28T14:32:40</date>
+  <millis>1369765960153</millis>
+  <sequence>283</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Removed all nonresponsive clients.</message>
+</record>
+<record>
+  <date>2013-05-28T14:32:45</date>
+  <millis>1369765965155</millis>
+  <sequence>284</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Started Checking at: 1,369,765,965</message>
+</record>
+<record>
+  <date>2013-05-28T14:34:00</date>
+  <millis>1369766040685</millis>
+  <sequence>285</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Stopped Checking at: 1,369,766,040</message>
+</record>
+<record>
+  <date>2013-05-28T14:34:00</date>
+  <millis>1369766040686</millis>
+  <sequence>286</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>Printing to clients.</message>
+</record>
+<record>
+  <date>2013-05-28T14:34:00</date>
+  <millis>1369766040687</millis>
+  <sequence>287</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Printed to all clients.</message>
+</record>
+<record>
+  <date>2013-05-28T14:34:00</date>
+  <millis>1369766040688</millis>
+  <sequence>288</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Removed all nonresponsive clients.</message>
+</record>
+<record>
+  <date>2013-05-28T14:34:05</date>
+  <millis>1369766045690</millis>
+  <sequence>289</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Started Checking at: 1,369,766,045</message>
+</record>
+<record>
+  <date>2013-05-28T14:35:21</date>
+  <millis>1369766121556</millis>
+  <sequence>290</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Stopped Checking at: 1,369,766,121</message>
+</record>
+<record>
+  <date>2013-05-28T14:35:21</date>
+  <millis>1369766121557</millis>
+  <sequence>291</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>printToClients</method>
+  <thread>17</thread>
+  <message>Printing to clients.</message>
+</record>
+<record>
+  <date>2013-05-28T14:35:21</date>
+  <millis>1369766121557</millis>
+  <sequence>292</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Printed to all clients.</message>
+</record>
+<record>
+  <date>2013-05-28T14:35:21</date>
+  <millis>1369766121558</millis>
+  <sequence>293</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Removed all nonresponsive clients.</message>
+</record>
+<record>
+  <date>2013-05-28T14:35:26</date>
+  <millis>1369766126560</millis>
+  <sequence>294</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>washcoscadaserver.SCADAServer</class>
+  <method>checkForAlarms</method>
+  <thread>17</thread>
+  <message>Started Checking at: 1,369,766,126</message>
+</record>
+</log>
