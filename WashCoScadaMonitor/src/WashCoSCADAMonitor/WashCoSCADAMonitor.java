@@ -43,7 +43,8 @@ public class WashCoSCADAMonitor extends JFrame implements WashCoSCADAConstants, 
     
     private JPanel controls;
     private JButton monitorButton, user;
-    private MapPanel mp;
+    //private MapPanel mp;
+    private SCADAGoogleMapPanel map;
     private SitePanel sp;
     private InfoPanel infop;
     private Thread monitor = null;
@@ -77,12 +78,14 @@ public class WashCoSCADAMonitor extends JFrame implements WashCoSCADAConstants, 
         monitor = new Thread(this);
         
         //this.makeControlPanel();
-        mp = new MapPanel();     
+        //mp = new MapPanel();   
+        map = new SCADAGoogleMapPanel();
+        
         sp = new SitePanel();
         infop = new InfoPanel();  
         
         this.addMouseListener(new clickListener());
-        this.add(mp, BorderLayout.CENTER);
+        this.add(map, BorderLayout.CENTER);
         //this.add(controls, BorderLayout.EAST);
         this.add(sp, BorderLayout.SOUTH);
         //this.add(infop, BorderLayout.EAST);
@@ -160,7 +163,7 @@ public class WashCoSCADAMonitor extends JFrame implements WashCoSCADAConstants, 
                         monitoring = true;
                         if(!gotSitesOnce)
                         {
-                        mp.setSitePoints(points);
+                            map.setSCADASites(sites);
                         gotSitesOnce = true;
                         }
                         sp.clearText();
@@ -234,8 +237,8 @@ public class WashCoSCADAMonitor extends JFrame implements WashCoSCADAConstants, 
 
                         }
                         
-                        sp.repaint();          
-                        mp.repaint();
+                        sp.repaint();   
+                        map.setSCADASites(sites);
                         
                         atSite++;
                     }
