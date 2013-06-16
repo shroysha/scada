@@ -63,7 +63,11 @@ public class PageWithModem implements Runnable, ReadListener {
             props.setProperty(MC_IP, "");
             props.setProperty(MC_PORT, "");
             props.setProperty(PP_PORT, "");
+<<<<<<< HEAD
             saveProps();
+=======
+            savePropsAndClose();
+>>>>>>> 76bb34ef27e6828f330d706d6a2e0104d5659e66
         } else {
             props.load(new FileInputStream(configFile)); 
         }

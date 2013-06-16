@@ -14,17 +14,20 @@ import java.util.*;
 import java.util.concurrent.*;
 import javax.swing.JTextArea;
 import java.net.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import modem.PageWithModem;
 
 /**
  *
- * @author Avogadro
+ * @author Peter O'Connor
+ * 
  */
 public class SCADAServer 
 {
+    Logger log = Logger.getGlobal();
     ArrayList<SCADASite> sites = new ArrayList<SCADASite>();
     File siteList = new File("SiteConfigs.dat");
-    //Timer poller;
     int second = 0;
     
     private final ScheduledExecutorService scheduler;
@@ -32,9 +35,7 @@ public class SCADAServer
     private final long delay;
     private final int DISCRETE_OFFSET = 10001;
     private final int REGISTER_OFFSET = 30001;
-    //private final long fShutdownAfter;
   
-    /** If invocations might overlap, you can specify more than a single thread.*/ 
     private static final int NUM_THREADS = 1;
     private static final boolean DONT_INTERRUPT_IF_RUNNING = false;
     
@@ -53,16 +54,30 @@ public class SCADAServer
     public SCADAServer()
     {
         clientPrinter = null;
+        try
+        {
+        pageServ = new PageWithModem();
+        }
+        catch(Exception ex)
+        {
+            log.info(ex.toString());
+        }
+        log.info("Starting up sites.");
+        
         this.startUpSites();
         initDelay = 5;
         delay = 5;
-        //fShutdownAfter = 10;
+
         scheduler = Executors.newScheduledThreadPool(NUM_THREADS);
         
         Thread cc = new Thread(new ClientConnector());
         cc.start();
+<<<<<<< HEAD
         
         pageServ = new PageWithModem();
+=======
+        log.log(Level.INFO, "Started Client Listening Thread.");
+>>>>>>> 76bb34ef27e6828f330d706d6a2e0104d5659e66
         this.startChecking(); 
     }
     
@@ -82,10 +97,12 @@ public class SCADAServer
         try
         {
             Scanner in = new Scanner(siteList);
-
+            
             while(in.hasNextLine())
             {   
                 String stuff = in.nextLine();
+                
+                log.log(Level.INFO, "Processing line: {0}", stuff);
                 
                 if(stuff.equals("") || stuff.charAt(0) == '#')
                     continue;
@@ -176,7 +193,7 @@ public class SCADAServer
                 //Finally, add the new site
                 if(stuff.equalsIgnoreCase("end"))
                 {
-                    System.out.println("Reached end of site!");
+                    log.info("Reached end of site!");
                     sites.add(new SCADASite(name, lat, lon, components));
                     name = "";
                     lat = "";
@@ -207,21 +224,28 @@ public class SCADAServer
         return info;
     }
     
-    private void printToClients()
+    private synchronized void printToClients()
     {
+        log.info("Printing to clients.");
         for(ClientConnection oos: clients)
         {
-            
+            try {
+                oos.resetOutStream();
+            } catch (IOException ex) {
+                Logger.getLogger(SCADAServer.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            log.log(Level.INFO, "Printing to client:{0}", oos.getIP());
             for(SCADASite ss: sites)
             {
                 try 
                 {
-                    System.out.println(ss.getStatus());
-                    totalStatus += ss.getStatus();
+
+                    log.log(Level.FINE, ss.getStatus());
                     oos.printSite(ss);
                 }catch (IOException ex)
                 {
-                    
+                    log.log(Level.SEVERE, "Printing to client:" + oos.getIP() + " failed.");
+                    log.log(Level.SEVERE, ex.toString());
                 }
             }
             
@@ -229,15 +253,14 @@ public class SCADAServer
             {
                 oos.printString("End Sites");
                 oos.resetOutStream();
+                log.info("Sent to client: " + oos.getIP());
             }
             catch (IOException se)
             {
-                se.printStackTrace();
+                log.log(Level.SEVERE, se.toString());
                 oos.connectionProblem();
-                System.out.println("Printing End Sites didn't work.");
+                log.log(Level.SEVERE, "Printing End Sites didn't work.");
             }
-            System.out.println("Sent to client");
-            
         }
         
     }
@@ -246,10 +269,9 @@ public class SCADAServer
     {
         for(int i = 0; i < clients.size(); i++)
         {
-            //System.out.println("I'm checking a client");
             if(clients.get(i).connectionDown())
             {
-                System.out.println("Removing: " + clients.get(i).getSocket().getInetAddress());
+                log.info("Removing: " + clients.get(i).getSocket().getInetAddress());
                 clients.remove(i);
             }
         }
@@ -257,29 +279,38 @@ public class SCADAServer
     
     private synchronized void checkForAlarms()
     {
+<<<<<<< HEAD
             
         //System.out.println("Started Checking at: " + System.currentTimeMillis()/1000);
+=======
+        long startSec = System.currentTimeMillis()/1000;
+        log.log(Level.INFO, "Started Checking at: {0}", startSec);
+>>>>>>> 76bb34ef27e6828f330d706d6a2e0104d5659e66
         for(SCADASite ss: sites)
         {
             ss.checkAlarms();
-            if(ss.isNewAlarm()) {
+            if(false && ss.isNewAlarm()) {
                 pageServ.startPage(currentJobID, ss.getCritcialInfo());
                 currentJobID++;
             }
             
         }
-        //System.out.println("Stopped Checking at: " + System.currentTimeMillis()/1000);
+        long endSec = System.currentTimeMillis()/1000;
+        
+        log.log(Level.INFO, "Stopped Checking at: {0}", endSec);
+        
         this.printToClients();
+        log.log(Level.INFO, "Printed to all clients.");
         this.removeClients();
+        log.log(Level.INFO, "Removed all nonresponsive clients.");
         
     }
     
-    public String getInformation()
+    public synchronized String getInformation()
     {
         totalStatus = "";
         for(SCADASite ss: sites)
             {
-                    //System.out.println();
                     totalStatus += ss.getStatus();
             }
         return totalStatus;
@@ -289,6 +320,8 @@ public class SCADAServer
     {
         Runnable checkAlarmTask = new CheckAlarmTask();
         scheduler.scheduleWithFixedDelay(checkAlarmTask, initDelay, delay, TimeUnit.SECONDS);
+        log.log(Level.INFO, "Started Alarm Listening Thread with initial delay of: {0} and continual delay of {1}", new Object[]{initDelay, delay});
+        
     }
     
     private final class CheckAlarmTask implements Runnable 
@@ -298,7 +331,6 @@ public class SCADAServer
         {
             second+=delay;
             checkForAlarms(); 
-            //printToClients(totalStatus);
         }
     }
     
@@ -316,21 +348,20 @@ public class SCADAServer
             } 
             catch (IOException e) 
             {
-                System.err.println("Could not listen on port: "+ port);
-                System.exit(1);
+                log.log(Level.SEVERE, "Could not listen on port: {0}", port);
             }
             while(listening)
             {
                 try 
                 {
-                    clients.add(new ClientConnection(serverSocket.accept()));
-                    System.out.println("connected.");
+                    ClientConnection client = new ClientConnection(serverSocket.accept());
+                    clients.add(client);
+                    log.log(Level.INFO, "Client at: {0}", client.getIP());
                     connected = true;
                 } 
                 catch (IOException e) 
                 {
-                    System.err.println("Accept failed.");
-                    System.exit(1);
+                    log.log(Level.SEVERE, "Accept failed.");
                 }
             }
         }
