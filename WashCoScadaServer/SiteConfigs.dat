@@ -6,21 +6,26 @@
 #   
 ############################################################
 
-Site Name=Yogi Bear
-Lat=162.0
-Long=630.0
-
+Site Name=Airport PS
+Lat=162
+Long=600
 Device Name=Radio
-TCPIP=192.168.10.14
+TCPIP=192.168.41.28
 Modbus=0
 Discretes=
 Registers=
 
-Device Name=Touch Screen
-TCPIP=192.168.10.10
+Device Name=Switch
+TCPIP=192.168.41.29
+Modbus=0
+Discretes=
+Registers=
+
+Device Name=SCADA Controller
+TCPIP=192.168.41.30
 Modbus=1
-Discretes=Pump:10001w,Relay:10002n,Power:10003c
-Registers=Level:30001c
+Discretes=LowLevel:10001c,HighLevel:10002c,Pump1:10003c,Pump2:10004c,PrimaryControl:10005c,MuffinMonster:10006c,Generator:10007c,Flooding:10008c,PowerSupply:10009w,ACPower:10010w,Battery:10011w,DCPower:10012c,Ethernet:10013w,ChassisIntrustion:10014w,TestWarning:10015w,TestCritical:10016c
+Registers=
 end
 
 #DeviceName=Touch Screen

@@ -25,7 +25,7 @@ public class SCADATester {
      */
     public static void main(String[] args) throws UnknownHostException, Exception 
     {
-        InetAddress IP = InetAddress.getByName("192.168.10.10");
+        InetAddress IP = InetAddress.getByName("192.168.41.30");
         ModbusTCPMaster mbm = new ModbusTCPMaster(IP.getHostAddress(), 502);
         System.out.println("About to connect");
         mbm.connect();

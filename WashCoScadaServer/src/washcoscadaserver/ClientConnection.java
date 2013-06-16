@@ -22,10 +22,13 @@ public class ClientConnection
     private Socket socket;
     private ObjectOutputStream out;
     private ObjectInputStream in;
-    int connectionAttempts;
+    private int connectionAttempts;
+    private String ip;
+    
     public ClientConnection(Socket aSocket) throws IOException
     {
         socket = aSocket;
+        ip = socket.getInetAddress().getHostAddress();
         socket.setSoTimeout(5000);
         out = new ObjectOutputStream(socket.getOutputStream());
         in = new ObjectInputStream(socket.getInputStream());
@@ -86,6 +89,11 @@ public class ClientConnection
     {
         System.out.println(socket.isClosed());
         return socket.isClosed();
+    }
+    
+    public String getIP()
+    {
+        return ip;
     }
     
     public Socket getSocket()
