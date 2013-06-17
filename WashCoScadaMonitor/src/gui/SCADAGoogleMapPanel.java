@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package WashCoSCADAMonitor;
+package gui;
 
 import SCADASite.SCADASite;
 import java.awt.Graphics;

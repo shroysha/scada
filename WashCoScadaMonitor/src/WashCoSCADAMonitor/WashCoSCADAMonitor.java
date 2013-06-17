@@ -8,6 +8,7 @@
  */
 package WashCoSCADAMonitor;
 
+import gui.SCADAGoogleMapPanel;
 import java.awt.*;
 import java.awt.event.*;
 import java.net.*;
@@ -15,10 +16,11 @@ import java.io.*;
 import java.util.*;
 import javax.swing.*;
 import SCADASite.*;
+import gui.SCADAJTree;
+import gui.SCADAJTreePrioritized;
 import java.util.logging.FileHandler;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.sound.sampled.*;
 
 public class WashCoSCADAMonitor extends JFrame implements WashCoSCADAConstants, Runnable
 {
@@ -64,6 +66,11 @@ public class WashCoSCADAMonitor extends JFrame implements WashCoSCADAConstants, 
     private SCADASite siteToMon = null;
     private int siteToMonitor = -1;
     
+    private JTabbedPane jtreeTabbed;
+    private SCADAJTree scadaTree;
+    private SCADAJTreePrioritized scadaPrioritizedTree;
+    
+    
     public WashCoSCADAMonitor()
     {
         sites = new ArrayList<SCADASite>();
@@ -80,6 +87,11 @@ public class WashCoSCADAMonitor extends JFrame implements WashCoSCADAConstants, 
         //this.makeControlPanel();
         //mp = new MapPanel();   
         map = new SCADAGoogleMapPanel();
+        jtreeTabbed = new JTabbedPane();
+        scadaTree = new SCADAJTree();
+        scadaPrioritizedTree = new SCADAJTreePrioritized();
+        
+        makeTabbedPane();
         
         sp = new SitePanel();
         infop = new InfoPanel();  
@@ -88,8 +100,14 @@ public class WashCoSCADAMonitor extends JFrame implements WashCoSCADAConstants, 
         this.add(map, BorderLayout.CENTER);
         //this.add(controls, BorderLayout.EAST);
         this.add(sp, BorderLayout.SOUTH);
+        this.add(jtreeTabbed, BorderLayout.EAST);
         //this.add(infop, BorderLayout.EAST);
         monitor = new Thread(WashCoSCADAMonitor.this);
+    }
+    
+    private void makeTabbedPane() {
+        jtreeTabbed.addTab("All", scadaTree);
+        jtreeTabbed.addTab("Alarms", scadaPrioritizedTree);
     }
     
     private void makeControlPanel()
@@ -164,6 +182,8 @@ public class WashCoSCADAMonitor extends JFrame implements WashCoSCADAConstants, 
                         if(!gotSitesOnce)
                         {
                             map.setSCADASites(sites);
+                            scadaTree.setSCADASites(sites);
+                            scadaPrioritizedTree.setSCADASites(sites);
                         gotSitesOnce = true;
                         }
                         sp.clearText();
@@ -239,6 +259,8 @@ public class WashCoSCADAMonitor extends JFrame implements WashCoSCADAConstants, 
                         
                         sp.repaint();   
                         map.setSCADASites(sites);
+                        scadaTree.setSCADASites(sites);
+                        scadaPrioritizedTree.setSCADASites(sites);
                         
                         atSite++;
                     }
