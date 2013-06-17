@@ -92,6 +92,7 @@ public class MapPanel extends JPanel implements WashCoSCADAConstants
 
             if(sp.getAlarmStatus() == 1)
             {
+                System.out.println("Warning in Point");
                 warningPaint = true;
                 g2.setColor(Color.ORANGE);
             }

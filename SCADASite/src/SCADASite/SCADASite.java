@@ -17,7 +17,7 @@ import net.wimpi.modbus.util.*;
  *
  * @author Avogadro
  */
-public class SCADASite implements Serializable
+public class SCADASite implements Serializable, Comparable
 {
     private String name, statusString, critInfo;
     private double lon, lat;
@@ -72,11 +72,11 @@ public class SCADASite implements Serializable
     }
     
     //Checking for alarms by going through all of the SCADAComponents
-    public void checkAlarms()
+    public synchronized void checkAlarms()
     {
         statusString = this.getName() + "\n";
-        //alarm = false;
-        //warning = false;
+        alarm = false;
+        warning = false;
    
         for(int siteid = 0; siteid < components.size(); siteid++)
             {
@@ -113,30 +113,24 @@ public class SCADASite implements Serializable
                             {
                                 statusString += "CRITICAL\n";
                                 alarm = true;
-                                warning = false;
                                 critInfo = currentD.getName();
                             }
                             else if(bv.getBit(0) && currentD.getWarning() == 1)
                             {
                                 statusString += "Warning\n";
                                 warning = true;
-                                alarm = false;
                                 newAlarm = true;
                                 critInfo = "";
                             }
                             else if(bv.getBit(0) && currentD.getWarning() == 0)
                             {
                                 statusString += "Not Normal\n";
-                                alarm = false;
-                                warning = false;
                                 newAlarm = true;
                                 critInfo = "";
                             }
                             else
                             {
                                 statusString += "Normal\n";
-                                alarm = false;
-                                warning = false;
                                 newAlarm = true;
                                 critInfo = "";
                             }
@@ -205,5 +199,20 @@ public class SCADASite implements Serializable
     public boolean getConnected()
     {
         return connected;
+    }
+    
+    public boolean equals(SCADASite other)
+    {
+        System.out.println(other.getName() + "Compared!");
+        return other.getName().equals(this.getName());
+    }
+    
+    public int compareTo(Object o) 
+    {
+        SCADASite ss = (SCADASite) o;
+        
+        if(ss.getName().equals(this.getName()))
+            return 0;
+        else return -1;
     }
 }

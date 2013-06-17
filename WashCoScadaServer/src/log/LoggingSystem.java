@@ -11,8 +11,7 @@ import java.util.Calendar;
 import java.util.Stack;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.swing.text.DateFormatter;
-
+import static util.Utilities.getBaseDirectory;
 /**
  *
  * @author Shawn
@@ -20,7 +19,7 @@ import javax.swing.text.DateFormatter;
 public class LoggingSystem implements LogListener {
 
     private static LoggingSystem logSys;
-    private static final File logFile = new File("log.txt");
+    private static final File logFile = new File(getBaseDirectory() + "log/" + "log.txt");
     
     public LoggingSystem() {
         super();

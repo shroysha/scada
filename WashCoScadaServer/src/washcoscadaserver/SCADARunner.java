@@ -35,6 +35,9 @@ public class SCADARunner
     
     public static void main(String[] args) 
     {
+        String[] verbose = {"v"};
+        dispatch(verbose);
+        
         server = new SCADAServer();
         frame = new JFrame("Beta SCADA Monitor GUI");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -83,7 +86,7 @@ public class SCADARunner
                     log.setLevel(Level.ALL);
             try 
             {
-                FileHandler fh = new FileHandler("log.txt");
+                FileHandler fh = new FileHandler("log.xml");
                 log.addHandler(fh);
                 log.info("Hai");
             } catch (IOException ex) 

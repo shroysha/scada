@@ -72,7 +72,10 @@ public class SCADAServer
         
         Thread cc = new Thread(new ClientConnector());
         cc.start();
+        pageServ = new PageWithModem();
+
         log.log(Level.INFO, "Started Client Listening Thread.");
+
         this.startChecking(); 
     }
     
@@ -95,9 +98,9 @@ public class SCADAServer
             
             while(in.hasNextLine())
             {   
-                log.info("Processing sites.");
-                
                 String stuff = in.nextLine();
+                
+                log.log(Level.INFO, "Processing line: {0}", stuff);
                 
                 if(stuff.equals("") || stuff.charAt(0) == '#')
                     continue;
@@ -188,7 +191,7 @@ public class SCADAServer
                 //Finally, add the new site
                 if(stuff.equalsIgnoreCase("end"))
                 {
-                    System.out.println("Reached end of site!");
+                    log.info("Reached end of site!");
                     sites.add(new SCADASite(name, lat, lon, components));
                     name = "";
                     lat = "";
@@ -224,16 +227,23 @@ public class SCADAServer
         log.info("Printing to clients.");
         for(ClientConnection oos: clients)
         {
-            log.info("Printing to client:" + oos.getIP());
+            try {
+                oos.resetOutStream();
+            } catch (IOException ex) {
+                Logger.getLogger(SCADAServer.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            log.log(Level.INFO, "Printing to client:{0}", oos.getIP());
             for(SCADASite ss: sites)
             {
                 try 
                 {
-                    totalStatus += ss.getStatus();
+
+                    log.log(Level.FINE, ss.getStatus());
                     oos.printSite(ss);
                 }catch (IOException ex)
                 {
-                    log.info("Printing to client:" + oos.getIP() + " failed.");
+                    log.log(Level.SEVERE, "Printing to client:" + oos.getIP() + " failed.");
+                    log.log(Level.SEVERE, ex.toString());
                 }
             }
             
@@ -245,9 +255,9 @@ public class SCADAServer
             }
             catch (IOException se)
             {
-                log.info(se.toString());
+                log.log(Level.SEVERE, se.toString());
                 oos.connectionProblem();
-                log.info("Printing End Sites didn't work.");
+                log.log(Level.SEVERE, "Printing End Sites didn't work.");
             }
         }
         
@@ -267,12 +277,14 @@ public class SCADAServer
     
     private synchronized void checkForAlarms()
     {
+            
+        //System.out.println("Started Checking at: " + System.currentTimeMillis()/1000);
         long startSec = System.currentTimeMillis()/1000;
         log.log(Level.INFO, "Started Checking at: {0}", startSec);
         for(SCADASite ss: sites)
         {
             ss.checkAlarms();
-            if(ss.isNewAlarm()) {
+            if(false && ss.isNewAlarm()) {
                 pageServ.startPage(currentJobID, ss.getCritcialInfo());
                 currentJobID++;
             }
@@ -303,7 +315,7 @@ public class SCADAServer
     {
         Runnable checkAlarmTask = new CheckAlarmTask();
         scheduler.scheduleWithFixedDelay(checkAlarmTask, initDelay, delay, TimeUnit.SECONDS);
-        log.log(Level.INFO, "Started Client Listening Thread with initial delay of: {0} and continual delay of {1}", new Object[]{initDelay, delay});
+        log.log(Level.INFO, "Started Alarm Listening Thread with initial delay of: {0} and continual delay of {1}", new Object[]{initDelay, delay});
         
     }
     
@@ -331,8 +343,7 @@ public class SCADAServer
             } 
             catch (IOException e) 
             {
-                System.err.println("Could not listen on port: "+ port);
-                System.exit(1);
+                log.log(Level.SEVERE, "Could not listen on port: {0}", port);
             }
             while(listening)
             {
@@ -345,8 +356,7 @@ public class SCADAServer
                 } 
                 catch (IOException e) 
                 {
-                    System.err.println("Accept failed.");
-                    System.exit(1);
+                    log.log(Level.SEVERE, "Accept failed.");
                 }
             }
         }

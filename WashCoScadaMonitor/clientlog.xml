@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2013-06-17T11:19:07</date>
+  <millis>1371482347892</millis>
+  <sequence>0</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>WashCoSCADAMonitor.WashCoSCADAMonitor</class>
+  <method>run</method>
+  <thread>15</thread>
+  <message>Made connection to: /127.0.0.1</message>
+</record>
+<record>
+  <date>2013-06-17T11:19:11</date>
+  <millis>1371482351554</millis>
+  <sequence>1</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>WashCoSCADAMonitor.WashCoSCADAMonitor</class>
+  <method>run</method>
+  <thread>15</thread>
+  <message>Going into monitoring mode.</message>
+</record>
+<record>
+  <date>2013-06-17T11:19:17</date>
+  <millis>1371482357281</millis>
+  <sequence>2</sequence>
+  <logger>global</logger>
+  <level>FINE</level>
+  <class>WashCoSCADAMonitor.WashCoSCADAMonitor</class>
+  <method>run</method>
+  <thread>15</thread>
+  <message>Processing site: Airport PS
+-77.726539.7085
+[
+
+Name: Radio
+IP: /192.168.41.28
+ModBus Enabled: false, 
+
+Name: Switch
+IP: /192.168.41.29
+ModBus Enabled: false, 
+
+Name: SCADA Controller
+IP: /192.168.41.30
+ModBus Enabled: true]</message>
+</record>
+<record>
+  <date>2013-06-17T11:19:17</date>
+  <millis>1371482357281</millis>
+  <sequence>3</sequence>
+  <logger>global</logger>
+  <level>FINE</level>
+  <class>WashCoSCADAMonitor.WashCoSCADAMonitor</class>
+  <method>run</method>
+  <thread>15</thread>
+  <message>Alarm status: true</message>
+</record>
+<record>
+  <date>2013-06-17T11:19:17</date>
+  <millis>1371482357281</millis>
+  <sequence>4</sequence>
+  <logger>global</logger>
+  <level>FINE</level>
+  <class>WashCoSCADAMonitor.WashCoSCADAMonitor</class>
+  <method>run</method>
+  <thread>15</thread>
+  <message>Warning status: true</message>
+</record>
+<record>
+  <date>2013-06-17T11:19:17</date>
+  <millis>1371482357282</millis>
+  <sequence>5</sequence>
+  <logger>global</logger>
+  <level>FINEST</level>
+  <class>WashCoSCADAMonitor.WashCoSCADAMonitor</class>
+  <method>run</method>
+  <thread>15</thread>
+  <message>Value of atSite: 0</message>
+</record>
+<record>
+  <date>2013-06-17T11:19:17</date>
+  <millis>1371482357282</millis>
+  <sequence>6</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>WashCoSCADAMonitor.WashCoSCADAMonitor</class>
+  <method>run</method>
+  <thread>15</thread>
+  <message>Updated: Airport PS</message>
+</record>
+<record>
+  <date>2013-06-17T11:19:18</date>
+  <millis>1371482358714</millis>
+  <sequence>7</sequence>
+  <logger>global</logger>
+  <level>INFO</level>
+  <class>WashCoSCADAMonitor.WashCoSCADAMonitor</class>
+  <method>run</method>
+  <thread>15</thread>
+  <message>Got data</message>
+</record>
+</log>
