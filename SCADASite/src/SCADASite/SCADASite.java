@@ -17,7 +17,7 @@ import net.wimpi.modbus.util.*;
  *
  * @author Avogadro
  */
-public class SCADASite implements Serializable
+public class SCADASite implements Serializable, Comparable
 {
     private String name, statusString, critInfo;
     private double lon, lat;
@@ -199,5 +199,20 @@ public class SCADASite implements Serializable
     public boolean getConnected()
     {
         return connected;
+    }
+    
+    public boolean equals(SCADASite other)
+    {
+        System.out.println(other.getName() + "Compared!");
+        return other.getName().equals(this.getName());
+    }
+    
+    public int compareTo(Object o) 
+    {
+        SCADASite ss = (SCADASite) o;
+        
+        if(ss.getName().equals(this.getName()))
+            return 0;
+        else return -1;
     }
 }

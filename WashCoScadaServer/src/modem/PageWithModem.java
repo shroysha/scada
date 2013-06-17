@@ -83,7 +83,7 @@ public class PageWithModem implements Runnable, ReadListener {
     }
     
     private void checkMCIP() {
-        while(!isValidPort(props.getProperty(MC_IP))) {
+        while(!isValidIPv4(props.getProperty(MC_IP))) {
             String ip = JOptionPane.showInputDialog("Enter Phone Modem IP").trim();
             props.setProperty(MC_IP, ip);
         }

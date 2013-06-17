@@ -10,17 +10,21 @@ import java.awt.Component;
 import java.util.ArrayList;
 import javax.swing.JLabel;
 import javax.swing.JTree;
+import javax.swing.event.TreeSelectionEvent;
+import javax.swing.event.TreeSelectionListener;
 import javax.swing.tree.*;
 
 /**
  *
  * @author Shawn
  */
-public class SCADAJTree extends JTree{
+public class SCADAJTree extends JTree
+{
     
     public SCADAJTree() {
         super();
         this.setCellRenderer(new SCADACellRenderer());
+        this.setFocusable(true);
     }
     
     public void setSCADASites(ArrayList<SCADASite> sites) {
@@ -33,6 +37,7 @@ public class SCADAJTree extends JTree{
         
         this.setModel(siteModel);
     }
+
     
     
     
@@ -77,7 +82,7 @@ public class SCADAJTree extends JTree{
                 }
                 
             } else if(value instanceof DefaultMutableTreeNode){
-                label.setText((String)value);
+                label.setText(((DefaultMutableTreeNode) value).toString());
             } else {
                 label.setText("Invalid argument passed");
             }
@@ -85,5 +90,19 @@ public class SCADAJTree extends JTree{
             return label;
         }
         
+        
+        
+    }
+    public SCADASite getSelected(TreeSelectionEvent tse)
+    {
+        DefaultMutableTreeNode node = (DefaultMutableTreeNode)
+                       getLastSelectedPathComponent();
+        
+        if(node instanceof SCADANode)
+        {
+            return ((SCADANode) node).getSite();
+        }
+        else
+            return null;
     }
 }

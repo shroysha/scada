@@ -72,12 +72,10 @@ public class SCADAServer
         
         Thread cc = new Thread(new ClientConnector());
         cc.start();
-<<<<<<< HEAD
-        
         pageServ = new PageWithModem();
-=======
+
         log.log(Level.INFO, "Started Client Listening Thread.");
->>>>>>> 76bb34ef27e6828f330d706d6a2e0104d5659e66
+
         this.startChecking(); 
     }
     
@@ -279,13 +277,10 @@ public class SCADAServer
     
     private synchronized void checkForAlarms()
     {
-<<<<<<< HEAD
             
         //System.out.println("Started Checking at: " + System.currentTimeMillis()/1000);
-=======
         long startSec = System.currentTimeMillis()/1000;
         log.log(Level.INFO, "Started Checking at: {0}", startSec);
->>>>>>> 76bb34ef27e6828f330d706d6a2e0104d5659e66
         for(SCADASite ss: sites)
         {
             ss.checkAlarms();

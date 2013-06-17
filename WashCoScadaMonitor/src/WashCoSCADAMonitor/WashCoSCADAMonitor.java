@@ -8,19 +8,22 @@
  */
 package WashCoSCADAMonitor;
 
-import gui.SCADAGoogleMapPanel;
-import java.awt.*;
-import java.awt.event.*;
-import java.net.*;
-import java.io.*;
-import java.util.*;
-import javax.swing.*;
 import SCADASite.*;
+import gui.SCADAGoogleMapPanel;
 import gui.SCADAJTree;
 import gui.SCADAJTreePrioritized;
+import java.awt.*;
+import java.awt.event.*;
+import java.io.*;
+import java.net.*;
+import java.util.*;
 import java.util.logging.FileHandler;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.*;
+import javax.swing.event.TreeSelectionEvent;
+import javax.swing.event.TreeSelectionListener;
+import javax.swing.tree.TreePath;
 
 public class WashCoSCADAMonitor extends JFrame implements WashCoSCADAConstants, Runnable
 {
@@ -88,8 +91,14 @@ public class WashCoSCADAMonitor extends JFrame implements WashCoSCADAConstants, 
         //mp = new MapPanel();   
         map = new SCADAGoogleMapPanel();
         jtreeTabbed = new JTabbedPane();
+        jtreeTabbed.setPreferredSize(new Dimension(500,500));
         scadaTree = new SCADAJTree();
         scadaPrioritizedTree = new SCADAJTreePrioritized();
+        
+        TreeListener tl = new TreeListener();
+        
+        scadaTree.addTreeSelectionListener(tl);
+        scadaPrioritizedTree.addTreeSelectionListener(tl);
         
         makeTabbedPane();
         
@@ -105,7 +114,8 @@ public class WashCoSCADAMonitor extends JFrame implements WashCoSCADAConstants, 
         monitor = new Thread(WashCoSCADAMonitor.this);
     }
     
-    private void makeTabbedPane() {
+    private void makeTabbedPane() 
+    {
         jtreeTabbed.addTab("All", scadaTree);
         jtreeTabbed.addTab("Alarms", scadaPrioritizedTree);
     }
@@ -184,7 +194,7 @@ public class WashCoSCADAMonitor extends JFrame implements WashCoSCADAConstants, 
                             map.setSCADASites(sites);
                             scadaTree.setSCADASites(sites);
                             scadaPrioritizedTree.setSCADASites(sites);
-                        gotSitesOnce = true;
+                            gotSitesOnce = true;
                         }
                         sp.clearText();
                         sp.setText("Monitor Initialized.");
@@ -238,7 +248,15 @@ public class WashCoSCADAMonitor extends JFrame implements WashCoSCADAConstants, 
                         log.log(Level.FINE, "Warning status: {0}", tSite.getAlarm());
                         log.log(Level.FINEST, "Value of atSite: {0}", atSite);
                         
-                        System.out.println(tSite.getWarning());
+                        for(int i = 0; i < sites.size(); i++)
+                        {
+                            if(tSite.getName().equals(sites.get(i).getName()))
+                            {
+                                sites.set(i, tSite);
+                                log.log(Level.INFO, "Updated: {0}", tSite.getName());
+                            }
+                            
+                        }
                         if(tSite.getAlarm())
                         {
                             points.get(atSite).setAlarm(2);
@@ -425,5 +443,29 @@ public class WashCoSCADAMonitor extends JFrame implements WashCoSCADAConstants, 
             
             }
         }
+    }
+    
+    class TreeListener implements TreeSelectionListener
+    {
+
+        @Override
+        public void valueChanged(TreeSelectionEvent e) 
+        {
+            SCADASite ss = null;
+            if(e.getSource().equals(scadaTree))
+                ss = scadaTree.getSelected(e);
+            
+            if(e.getSource().equals(scadaPrioritizedTree))
+                ss = scadaPrioritizedTree.getSelected(e);
+            
+            if(ss != null)
+            {
+                siteToMon = ss;
+                sp.setText(ss.getStatus());
+            }
+
+            
+        }
+        
     }
 }
