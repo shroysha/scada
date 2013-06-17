@@ -20,22 +20,28 @@ import javax.swing.tree.*;
  */
 public class SCADAJTree extends JTree
 {
+    DefaultMutableTreeNode root;
+    TreeModel siteModel;
     
     public SCADAJTree() {
         super();
+        root = new DefaultMutableTreeNode("Sites");
+        siteModel = new DefaultTreeModel(root);
+        this.setModel(siteModel);
         this.setCellRenderer(new SCADACellRenderer());
         this.setFocusable(true);
+        
     }
     
     public void setSCADASites(ArrayList<SCADASite> sites) {
-        DefaultMutableTreeNode root = new DefaultMutableTreeNode("Sites");
-        TreeModel siteModel = new DefaultTreeModel(root);
-        
         for(SCADASite site: sites) {
             root.add(new SCADANode(site));
         }
         
-        this.setModel(siteModel);
+        for (int i = 0; i < this.getRowCount(); i++) 
+        {
+         this.expandRow(i);
+        }
     }
 
     
