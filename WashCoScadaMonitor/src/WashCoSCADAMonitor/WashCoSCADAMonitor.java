@@ -119,7 +119,7 @@ public class WashCoSCADAMonitor extends JFrame implements WashCoSCADAConstants, 
             fileIn = new Scanner(serverInfo);
             } catch(FileNotFoundException ex)
             {
-                log.log(Level.OFF, "Configuration File: server.ini not found.");
+                log.log(Level.SEVERE, "Configuration File: server.ini not found.");
                 JOptionPane.showMessageDialog(null, "Configuration File: server.ini not found.");
             }
 
@@ -228,7 +228,7 @@ public class WashCoSCADAMonitor extends JFrame implements WashCoSCADAConstants, 
                     }
                 } catch (ClassNotFoundException ex) 
                 {
-                    log.info("Error processing Sites.");
+                    log.info("Error with input stream.");
                 }
 
 
