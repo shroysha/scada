@@ -34,6 +34,8 @@ public class SCADAJTree extends JTree
     }
     
     public void setSCADASites(ArrayList<SCADASite> sites) {
+        root.removeAllChildren();
+        
         for(SCADASite site: sites) {
             root.add(new SCADANode(site));
         }
