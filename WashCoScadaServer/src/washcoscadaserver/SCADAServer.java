@@ -30,7 +30,7 @@ public class SCADAServer
     File siteList = new File("SiteConfigs.dat");
     int second = 0;
     
-    private final ScheduledExecutorService scheduler;
+    private ScheduledExecutorService scheduler;
     private final long initDelay;
     private final long delay;
     private final int DISCRETE_OFFSET = 10001;
@@ -54,29 +54,19 @@ public class SCADAServer
     public SCADAServer()
     {
         clientPrinter = null;
-        try
-        {
-        pageServ = new PageWithModem();
-        }
-        catch(Exception ex)
-        {
-            log.info(ex.toString());
-        }
-        log.info("Starting up sites.");
-        
-        this.startUpSites();
+        scheduler = null;
+        pageServ = null;
         initDelay = 5;
         delay = 5;
-
-        scheduler = Executors.newScheduledThreadPool(NUM_THREADS);
+        
+        log.info("Starting up sites.");
+        this.startUpSites();
+        
         
         Thread cc = new Thread(new ClientConnector());
         cc.start();
-        pageServ = new PageWithModem();
 
         log.log(Level.INFO, "Started Client Listening Thread.");
-
-        this.startChecking(); 
     }
     
     private void startUpSites()
@@ -284,7 +274,7 @@ public class SCADAServer
         for(SCADASite ss: sites)
         {
             ss.checkAlarms();
-            if(false && ss.isNewAlarm()) {
+            if(pageServ != null && pageServ.isActive() && ss.isNewAlarm()) {
                 pageServ.startPage(currentJobID, ss.getCritcialInfo());
                 currentJobID++;
             }
@@ -311,20 +301,66 @@ public class SCADAServer
         return totalStatus;
     }
     
-    private void startChecking()
+    public void startChecking()
     {
+        if(scheduler == null || (scheduler != null && scheduler.isShutdown())) 
+            scheduler = Executors.newScheduledThreadPool(NUM_THREADS);
         Runnable checkAlarmTask = new CheckAlarmTask();
         scheduler.scheduleWithFixedDelay(checkAlarmTask, initDelay, delay, TimeUnit.SECONDS);
         log.log(Level.INFO, "Started Alarm Listening Thread with initial delay of: {0} and continual delay of {1}", new Object[]{initDelay, delay});
         
     }
     
+    public void stopChecking()
+    {
+        scheduler.shutdown();
+    }
+    
+    public boolean isChecking()
+    {
+        if(scheduler == null)
+            return false;
+        else
+            return !scheduler.isShutdown();
+    }
+    public boolean switchPaging()
+    {
+        if (pageServ == null)
+        {
+            try
+            {
+                pageServ = new PageWithModem();
+            }
+            catch(Exception ex)
+            {
+                log.info(ex.toString());
+            }
+        }
+        
+        if (pageServ.isActive())
+        {
+            pageServ.stop();
+            return false;
+        }
+        else
+        {
+            pageServ.start();
+            return true;
+        }
+    }
+    
+    public void clearAllPages()
+    {
+        if(pageServ != null && pageServ.isActive())
+        {
+            pageServ.stopAllRunningPages();
+        }
+    }
     private final class CheckAlarmTask implements Runnable 
     {
         @Override
         public void run() 
         {
-            second+=delay;
             checkForAlarms(); 
         }
     }

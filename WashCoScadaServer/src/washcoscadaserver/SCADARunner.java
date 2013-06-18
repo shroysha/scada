@@ -39,23 +39,26 @@ public class SCADARunner
         dispatch(verbose);
         
         server = new SCADAServer();
-        frame = new JFrame("Beta SCADA Monitor GUI");
+        frame = new JFrame("SCADA Monitor GUI");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLayout(new BorderLayout());
-        frame.setSize(550,700);
+        frame.setSize(700,700);
         
         JLabel title = new JLabel("SCADA Server");
         JPanel main = new JPanel();
         JPanel titlePanel = new JPanel();
+        JPanel controls = new ControlPanel(server);
+        frame.add(controls, BorderLayout.EAST);
+        
         titlePanel.setPreferredSize(new Dimension(500,30));
-        main.setPreferredSize(new Dimension(500,500));
+        main.setPreferredSize(new Dimension(500,700));
         
         mainArea = new JTextArea(30,30);
         mainArea.setText("Initializing.");
         mainArea.setEditable(false);
         
         JScrollPane scrollStatus = new JScrollPane(mainArea);
-        scrollStatus.setPreferredSize(new Dimension(500,500));
+        scrollStatus.setPreferredSize(new Dimension(500,700));
         scrollStatus.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED);
         scrollStatus.setAutoscrolls(true);
         
@@ -68,7 +71,7 @@ public class SCADARunner
 
         titlePanel.add(title);
         frame.add(titlePanel,BorderLayout.NORTH);
-        Timer bob = new Timer(5001, new TimerListener());
+        Timer bob = new Timer(1000, new TimerListener());
         bob.start();
         frame.setVisible(true);
     }
@@ -105,10 +108,16 @@ public class SCADARunner
         @Override
         public void actionPerformed(ActionEvent e)
         {
-            
-            mainArea.setText("Status:\n");
-            mainArea.append(server.getInformation());
-            frame.repaint();
+            if(server.isChecking())
+            {
+                mainArea.setText("Status:\n");
+                mainArea.append(server.getInformation());
+                frame.repaint();
+            }
+            else
+            {
+                mainArea.setText("SCADA Server Offline. Please start.");
+            }
         }
 
     }

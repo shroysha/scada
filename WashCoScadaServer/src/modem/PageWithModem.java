@@ -225,6 +225,11 @@ public class PageWithModem implements Runnable, ReadListener {
         stopPagingModule();
     }
     
+    public boolean isActive()
+    {
+        return pagingModuleServer != null;
+    }
+    
     @Override
     public void run() {
         try{
