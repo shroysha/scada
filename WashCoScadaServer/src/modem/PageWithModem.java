@@ -183,7 +183,7 @@ public class PageWithModem implements Runnable, ReadListener {
         new Thread(this).start();
     }
     
-    public void stopPagingModule() {
+    private void stopPagingModule() {
         if(pagingModuleServer != null && !pagingModuleServer.isClosed()) {
             try {
                 pagingModuleServer.close();
