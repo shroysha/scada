@@ -23,7 +23,7 @@ import modem.PageWithModem;
  * @author Peter O'Connor
  * 
  */
-public class SCADAServer 
+public class SCADAServer implements Runnable
 {
     Logger log = Logger.getGlobal();
     ArrayList<SCADASite> sites = new ArrayList<SCADASite>();
@@ -310,8 +310,9 @@ public class SCADAServer
     {
         if(scheduler == null || (scheduler != null && scheduler.isShutdown())) 
             scheduler = Executors.newScheduledThreadPool(NUM_THREADS);
-        Runnable checkAlarmTask = new CheckAlarmTask();
-        scheduler.scheduleWithFixedDelay(checkAlarmTask, initDelay, delay, TimeUnit.SECONDS);
+        Thread checkAlarmTask = new CheckAlarmTask();
+        checkAlarmTask.start();
+        //scheduler.scheduleWithFixedDelay(checkAlarmTask, initDelay, delay, TimeUnit.SECONDS);
         log.log(Level.INFO, "Started Alarm Listening Thread with initial delay of: {0} and continual delay of {1}", new Object[]{initDelay, delay});
         
     }
@@ -375,12 +376,25 @@ public class SCADAServer
             pageServ.stopAllRunningPages();
         }
     }
-    private final class CheckAlarmTask implements Runnable 
+
+    @Override
+    public void run() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    private final class CheckAlarmTask extends Thread
     {
         @Override
         public void run() 
         {
+            while(true)
+            {
             checkForAlarms(); 
+            try {
+                Thread.sleep(5000);
+            } catch (InterruptedException ex) {
+                Logger.getLogger(SCADAServer.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            }
         }
     }
     

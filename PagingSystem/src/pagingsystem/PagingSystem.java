@@ -382,18 +382,20 @@ public final class PagingSystem implements AlertListener, UpdateListener {
                     Page page = new Page(alert, employee);
                     ps.sendPage(page);
                 }
-                System.out.println("Holding for 15");
                 hold(FIFTEEN);
+                }
             }
         }
         
         private void hold(int time) {
             try {
-                Thread.sleep(5000); // 15 minutes
+                System.out.println("Going to sleep");
+                Thread.sleep(time); // 15 minutes
+                System.out.println("I woke up!");
             } catch (InterruptedException ex) {
                 Logger.getLogger(PagingSystem.class.getName()).log(Level.SEVERE, null, ex);
             }
-        }
+        
     }
     
     public class PagingSystemPanel extends JPanel implements UpdateListener, LogListener {

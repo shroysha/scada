@@ -342,14 +342,14 @@ public class PageWithModem implements Runnable, ReadListener {
             String compose = "ST " + jobID + " " + message + " ACKCODE:" + ackCode;
             os.write(compose.getBytes());
             os.flush();
-            LoggingSystem.getLoggingSystem().alertAllLogListeners("Page sent: jobID-" + jobID + " message-" + message);
+            //LoggingSystem.getLoggingSystem().alertAllLogListeners("Page sent: jobID-" + jobID + " message-" + message);
         }
         
         protected void acknowledgePage(int jobID) throws IOException {
             String compose = "ACK " + jobID;
             os.write(compose.getBytes());
             os.flush();
-            LoggingSystem.getLoggingSystem().alertAllLogListeners("Acknowledgement received: jobID-" + jobID);
+            //LoggingSystem.getLoggingSystem().alertAllLogListeners("Acknowledgement received: jobID-" + jobID);
         }
         
         protected void stopPage(int jobID) throws IOException {
