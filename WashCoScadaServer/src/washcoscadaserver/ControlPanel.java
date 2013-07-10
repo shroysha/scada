@@ -70,6 +70,7 @@ public class ControlPanel extends JPanel
                     //bl.getLayoutComponent(BorderLayout.SOUTH);
                     //scadaFrame.remove(((BorderLayout)scadaFrame.getLayout()).getLayoutComponent(BorderLayout.SOUTH));
                     scadaFrame.remove(SCADARunner.pagingHolder);
+                    server.pageServ.getPagingGUI().setPreferredSize(new Dimension(700,250));
                     scadaFrame.add(server.pageServ.getPagingGUI(), BorderLayout.SOUTH);
                     scadaFrame.revalidate();
                     pageButton.setForeground(Color.green.darker());
