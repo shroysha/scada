@@ -48,7 +48,7 @@ public class SCADAServer
     private final int DEVICE_INFO_LINES = 4;
     private JTextArea textArea;
     
-    private PageWithModem pageServ;
+    protected PageWithModem pageServ;
     private int currentJobID = 1;
     
     public SCADAServer()
@@ -273,10 +273,15 @@ public class SCADAServer
         log.log(Level.INFO, "Started Checking at: {0}", startSec);
         for(SCADASite ss: sites)
         {
+            log.log(Level.INFO, "Checking Site:  {0}", ss.getName());
             ss.checkAlarms();
+            
             if(pageServ != null && pageServ.isActive() && ss.isNewAlarm()) {
+                System.out.println("About to page");
+                System.out.println(ss.getCritcialInfo());
                 pageServ.startPage(currentJobID, ss.getCritcialInfo());
                 currentJobID++;
+                System.out.println("Finished Paging");
             }
             
         }
@@ -323,30 +328,44 @@ public class SCADAServer
         else
             return !scheduler.isShutdown();
     }
+    
+    public boolean pagingOff()
+    {
+        if (pageServ != null)
+            pageServ.stop();
+        else
+        {
+            return false;
+        }
+        
+        return true;
+    }
+    
     public boolean switchPaging()
     {
         if (pageServ == null)
         {
+            pageServ = new PageWithModem(); 
+            return true;
+        }else if(!pageServ.isActive())
+        {
             try
             {
-                pageServ = new PageWithModem();
+                pageServ.start();
+                return true;
             }
             catch(Exception ex)
             {
-                log.info(ex.toString());
+                log.log(Level.SEVERE, ex.toString());
+                return false;
             }
         }
-        
-        if (pageServ.isActive())
+        else
         {
             pageServ.stop();
             return false;
         }
-        else
-        {
-            pageServ.start();
-            return true;
-        }
+
     }
     
     public void clearAllPages()

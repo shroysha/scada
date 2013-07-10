@@ -31,6 +31,8 @@ public class ModemConnector
         ip = aIp;
         port = aPort;
         modem = new Socket(ip, Integer.parseInt(port));
+        //Socket socket2 = new Socket();
+        //socket2.connect(new InetSocketAddress(ip, Integer.parseInt(port)), 5000);
         out = new OutputStreamWriter(modem.getOutputStream());
         in = new InputStreamReader(modem.getInputStream());
         
@@ -156,7 +158,7 @@ public class ModemConnector
                 } 
                 catch (IOException ex) 
                 {
-                    System.out.println("Error");
+                    System.out.println(ex);
                 }
             }
             

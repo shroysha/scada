@@ -8,10 +8,12 @@
  */
 package washcoscadaserver;
 
+import gui.PagingGUI;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
+import java.awt.LayoutManager;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
@@ -19,8 +21,6 @@ import java.util.logging.FileHandler;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.*;
-import modem.*;
-import log.*;
 
 public class SCADARunner
 {
@@ -30,8 +30,10 @@ public class SCADARunner
     static JTextArea mainArea;
     static JFrame frame;
     static SCADAServer server;
+    static JPanel pagingHolder;
     //static modem.PageWithModem pagerServer = new modem.PageWithModem();
-    static log.LoggingSystem logServer = new log.LoggingSystem();
+    //static log.LoggingSystem logServer = new log.LoggingSystem();
+    static PagingGUI pagingGUI;
     
     public static void main(String[] args) 
     {
@@ -47,7 +49,7 @@ public class SCADARunner
         JLabel title = new JLabel("SCADA Server");
         JPanel main = new JPanel();
         JPanel titlePanel = new JPanel();
-        JPanel controls = new ControlPanel(server);
+        ControlPanel controls = new ControlPanel(server, frame);
         frame.add(controls, BorderLayout.EAST);
         
         titlePanel.setPreferredSize(new Dimension(500,30));
@@ -65,6 +67,13 @@ public class SCADARunner
         
         main.add(scrollStatus);
         frame.add(main, BorderLayout.CENTER);
+        
+        pagingHolder = new JPanel();
+        pagingHolder.setPreferredSize(new Dimension(700, 250));
+        JLabel labelTemp = new JLabel("Paging System Inactive.");
+        pagingHolder.add(labelTemp);
+        
+        frame.add(pagingHolder, BorderLayout.SOUTH);
         
         title.setFont(Font.getFont("Calibri"));
         title.setForeground(Color.RED);
