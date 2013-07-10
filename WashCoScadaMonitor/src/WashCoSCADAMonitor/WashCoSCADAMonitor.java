@@ -23,7 +23,6 @@ import java.util.logging.Logger;
 import javax.swing.*;
 import javax.swing.event.TreeSelectionEvent;
 import javax.swing.event.TreeSelectionListener;
-import javax.swing.tree.TreePath;
 
 public class WashCoSCADAMonitor extends JFrame implements WashCoSCADAConstants, Runnable
 {
@@ -63,7 +62,7 @@ public class WashCoSCADAMonitor extends JFrame implements WashCoSCADAConstants, 
     private Socket scadaConnection = null;
     private ObjectInputStream in = null;
     private ObjectOutputStream out = null;
-    private boolean gotSitesOnce = false;
+    //private boolean gotSitesOnce = false;
     private Scanner fileIn = null;
     private int atSite;
     private SCADASite siteToMon = null;
@@ -178,6 +177,15 @@ public class WashCoSCADAMonitor extends JFrame implements WashCoSCADAConstants, 
             
         }
         
+        initSites();
+        
+        log.log(Level.INFO, "Going into monitoring mode.");
+        monitor();
+
+    }
+    
+    public void initSites()
+    {
         while(initSites)
         {
             try 
@@ -187,17 +195,12 @@ public class WashCoSCADAMonitor extends JFrame implements WashCoSCADAConstants, 
                     Object temp = in.readObject(); 
                     if(temp instanceof String)
                     {
-                        initSites= false;
-                        monitoring = true;
-                        if(!gotSitesOnce)
-                        {
-                            map.setSCADASites(sites);
-                            scadaTree.setSCADASites(sites);
-                            scadaPrioritizedTree.setSCADASites(sites);
-                            gotSitesOnce = true;
-                        }
+                        map.setSCADASites(sites);
+                        scadaTree.setSCADASites(sites);
+                        scadaPrioritizedTree.setSCADASites(sites);
                         sp.clearText();
                         sp.setText("Monitor Initialized.");
+                        return;
                     }
                     else
                     {
@@ -223,10 +226,10 @@ public class WashCoSCADAMonitor extends JFrame implements WashCoSCADAConstants, 
                 log.log(Level.SEVERE, ex.getMessage());
             }
         }
-        
-        log.log(Level.INFO, "Going into monitoring mode.");
-        
-        while(monitoring)
+    }
+    public void monitor()
+    {
+                while(monitoring)
         {
             try 
             {
@@ -245,8 +248,7 @@ public class WashCoSCADAMonitor extends JFrame implements WashCoSCADAConstants, 
                         SCADASite tSite = (SCADASite) temp;
                         log.log(Level.FINE, "Processing site: {0}", tSite.toString());
                         log.log(Level.FINE, "Alarm status: {0}", tSite.getAlarm());
-                        log.log(Level.FINE, "Warning status: {0}", tSite.getAlarm());
-                        log.log(Level.FINEST, "Value of atSite: {0}", atSite);
+                        log.log(Level.FINE, "Warning status: {0}", tSite.getWarning());
                         
                         for(int i = 0; i < sites.size(); i++)
                         {
@@ -257,18 +259,7 @@ public class WashCoSCADAMonitor extends JFrame implements WashCoSCADAConstants, 
                             }
                             
                         }
-                        if(tSite.getAlarm())
-                        {
-                            points.get(atSite).setAlarm(2);
-                        }
-                        else if(tSite.getWarning())
-                        {
-                            System.out.println("It's warning.");
-                            points.get(atSite).setAlarm(1);
-                        }
-                        else
-                            points.get(atSite).setAlarm(0);
-                        
+
                         if(siteToMon != null && tSite.getName().equals(siteToMon.getName()))
                         {
                             sp.setText(tSite.getStatus());
@@ -284,6 +275,7 @@ public class WashCoSCADAMonitor extends JFrame implements WashCoSCADAConstants, 
                     }
                 } catch (ClassNotFoundException ex) 
                 {
+                    log.info("Error with input stream.");
                     log.log(Level.SEVERE, "Error processing Sites.");
                 }
 
@@ -296,8 +288,6 @@ public class WashCoSCADAMonitor extends JFrame implements WashCoSCADAConstants, 
         
         log.log(Level.SEVERE, "Monitor thread ended.");
     }
-    
-
 
     private class StartListener implements ActionListener {
 

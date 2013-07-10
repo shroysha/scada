@@ -30,7 +30,7 @@ public class SCADAServer
     File siteList = new File("SiteConfigs.dat");
     int second = 0;
     
-    private final ScheduledExecutorService scheduler;
+    private ScheduledExecutorService scheduler;
     private final long initDelay;
     private final long delay;
     private final int DISCRETE_OFFSET = 10001;
@@ -48,35 +48,25 @@ public class SCADAServer
     private final int DEVICE_INFO_LINES = 4;
     private JTextArea textArea;
     
-    private PageWithModem pageServ;
+    protected PageWithModem pageServ;
     private int currentJobID = 1;
     
     public SCADAServer()
     {
         clientPrinter = null;
-        try
-        {
-        pageServ = new PageWithModem();
-        }
-        catch(Exception ex)
-        {
-            log.info(ex.toString());
-        }
-        log.info("Starting up sites.");
-        
-        this.startUpSites();
+        scheduler = null;
+        pageServ = null;
         initDelay = 5;
         delay = 5;
-
-        scheduler = Executors.newScheduledThreadPool(NUM_THREADS);
+        
+        log.info("Starting up sites.");
+        this.startUpSites();
+        
         
         Thread cc = new Thread(new ClientConnector());
         cc.start();
-        pageServ = new PageWithModem();
 
         log.log(Level.INFO, "Started Client Listening Thread.");
-
-        this.startChecking(); 
     }
     
     private void startUpSites()
@@ -283,10 +273,15 @@ public class SCADAServer
         log.log(Level.INFO, "Started Checking at: {0}", startSec);
         for(SCADASite ss: sites)
         {
+            log.log(Level.INFO, "Checking Site:  {0}", ss.getName());
             ss.checkAlarms();
-            if(false && ss.isNewAlarm()) {
+            
+            if(pageServ != null && pageServ.isActive() && ss.isNewAlarm()) {
+                System.out.println("About to page");
+                System.out.println(ss.getCritcialInfo());
                 pageServ.startPage(currentJobID, ss.getCritcialInfo());
                 currentJobID++;
+                System.out.println("Finished Paging");
             }
             
         }
@@ -311,20 +306,80 @@ public class SCADAServer
         return totalStatus;
     }
     
-    private void startChecking()
+    public void startChecking()
     {
+        if(scheduler == null || (scheduler != null && scheduler.isShutdown())) 
+            scheduler = Executors.newScheduledThreadPool(NUM_THREADS);
         Runnable checkAlarmTask = new CheckAlarmTask();
         scheduler.scheduleWithFixedDelay(checkAlarmTask, initDelay, delay, TimeUnit.SECONDS);
         log.log(Level.INFO, "Started Alarm Listening Thread with initial delay of: {0} and continual delay of {1}", new Object[]{initDelay, delay});
         
     }
     
+    public void stopChecking()
+    {
+        scheduler.shutdown();
+    }
+    
+    public boolean isChecking()
+    {
+        if(scheduler == null)
+            return false;
+        else
+            return !scheduler.isShutdown();
+    }
+    
+    public boolean pagingOff()
+    {
+        if (pageServ != null)
+            pageServ.stop();
+        else
+        {
+            return false;
+        }
+        
+        return true;
+    }
+    
+    public boolean switchPaging()
+    {
+        if (pageServ == null)
+        {
+            pageServ = new PageWithModem(); 
+            return true;
+        }else if(!pageServ.isActive())
+        {
+            try
+            {
+                pageServ.start();
+                return true;
+            }
+            catch(Exception ex)
+            {
+                log.log(Level.SEVERE, ex.toString());
+                return false;
+            }
+        }
+        else
+        {
+            pageServ.stop();
+            return false;
+        }
+
+    }
+    
+    public void clearAllPages()
+    {
+        if(pageServ != null && pageServ.isActive())
+        {
+            pageServ.stopAllRunningPages();
+        }
+    }
     private final class CheckAlarmTask implements Runnable 
     {
         @Override
         public void run() 
         {
-            second+=delay;
             checkForAlarms(); 
         }
     }

@@ -8,10 +8,12 @@
  */
 package washcoscadaserver;
 
+import gui.PagingGUI;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
+import java.awt.LayoutManager;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
@@ -19,8 +21,6 @@ import java.util.logging.FileHandler;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.*;
-import modem.*;
-import log.*;
 
 public class SCADARunner
 {
@@ -30,8 +30,10 @@ public class SCADARunner
     static JTextArea mainArea;
     static JFrame frame;
     static SCADAServer server;
+    static JPanel pagingHolder;
     //static modem.PageWithModem pagerServer = new modem.PageWithModem();
-    static log.LoggingSystem logServer = new log.LoggingSystem();
+    //static log.LoggingSystem logServer = new log.LoggingSystem();
+    static PagingGUI pagingGUI;
     
     public static void main(String[] args) 
     {
@@ -39,23 +41,26 @@ public class SCADARunner
         dispatch(verbose);
         
         server = new SCADAServer();
-        frame = new JFrame("Beta SCADA Monitor GUI");
+        frame = new JFrame("SCADA Monitor GUI");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLayout(new BorderLayout());
-        frame.setSize(550,700);
+        frame.setSize(700,700);
         
         JLabel title = new JLabel("SCADA Server");
         JPanel main = new JPanel();
         JPanel titlePanel = new JPanel();
+        ControlPanel controls = new ControlPanel(server, frame);
+        frame.add(controls, BorderLayout.EAST);
+        
         titlePanel.setPreferredSize(new Dimension(500,30));
-        main.setPreferredSize(new Dimension(500,500));
+        main.setPreferredSize(new Dimension(500,700));
         
         mainArea = new JTextArea(30,30);
         mainArea.setText("Initializing.");
         mainArea.setEditable(false);
         
         JScrollPane scrollStatus = new JScrollPane(mainArea);
-        scrollStatus.setPreferredSize(new Dimension(500,500));
+        scrollStatus.setPreferredSize(new Dimension(500,700));
         scrollStatus.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED);
         scrollStatus.setAutoscrolls(true);
         
@@ -63,12 +68,19 @@ public class SCADARunner
         main.add(scrollStatus);
         frame.add(main, BorderLayout.CENTER);
         
+        pagingHolder = new JPanel();
+        pagingHolder.setPreferredSize(new Dimension(700, 250));
+        JLabel labelTemp = new JLabel("Paging System Inactive.");
+        pagingHolder.add(labelTemp);
+        
+        frame.add(pagingHolder, BorderLayout.SOUTH);
+        
         title.setFont(Font.getFont("Calibri"));
         title.setForeground(Color.RED);
 
         titlePanel.add(title);
         frame.add(titlePanel,BorderLayout.NORTH);
-        Timer bob = new Timer(5001, new TimerListener());
+        Timer bob = new Timer(1000, new TimerListener());
         bob.start();
         frame.setVisible(true);
     }
@@ -105,10 +117,16 @@ public class SCADARunner
         @Override
         public void actionPerformed(ActionEvent e)
         {
-            
-            mainArea.setText("Status:\n");
-            mainArea.append(server.getInformation());
-            frame.repaint();
+            if(server.isChecking())
+            {
+                mainArea.setText("Status:\n");
+                mainArea.append(server.getInformation());
+                frame.repaint();
+            }
+            else
+            {
+                mainArea.setText("SCADA Server Offline. Please start.");
+            }
         }
 
     }
