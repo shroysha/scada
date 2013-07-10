@@ -296,7 +296,7 @@ public final class PagingSystem implements AlertListener, UpdateListener {
             //os.write("\r\r\r\r\r".getBytes());
             //os.flush();
 
-                os.write("\r".getBytes());
+            os.write("\r".getBytes());
             char ESC = 0x1B;
             char CR  = 0x0D;
             String everything = "" + CR + ESC + (char)0x050 + (char)0x47 + (char)0x31 +CR;
