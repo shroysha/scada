@@ -1,5 +1,4 @@
 # scada
-{*> see code: [https://github.com/shroysha/scada](https://github.com/shroysha/scada)*}
 
 ## Subprojects 
 1. [scada-app-client](https://github.com/shroysha/scada-app-client)
