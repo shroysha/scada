@@ -1,0 +1,23 @@
+buildscript {
+apply from: "dev.shroysha.gradle"
+
+}
+
+plugins {
+id("dev.shroysha.plugin")
+id("ear")
+
+}
+
+repositories {
+mavenCentral()
+gradlePluginPortal()
+
+}
+
+dependencies {
+deploy project(path: ":scada:scada-app-client", configuration: "archives")
+deploy project(path: ":scada:scada-ejb", configuration: "archives")
+deploy project(path: ":scada:scada-war", configuration: "archives")
+
+}

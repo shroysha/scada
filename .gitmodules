@@ -1,0 +1,9 @@
+[submodule "scada-app-client"]
+	path = scada-app-client
+	url = https://github.com/shroysha/scada-app-client.git
+[submodule "scada-ejb"]
+	path = scada-ejb
+	url = https://github.com/shroysha/scada-ejb.git
+[submodule "scada-war"]
+	path = scada-war
+	url = https://github.com/shroysha/scada-war.git
