@@ -1,5 +1,5 @@
 # scada
-> see code: [https://github.com/shroysha/shroysha.github.io/tree/master/scada](https://github.com/shroysha/shroysha.github.io/tree/master/scada)
+> see code: [https://github.com/shroysha/scada](https://github.com/shroysha/scada)
 
 ## Subprojects 
 1. [scada-app-client](scada-app-client)
