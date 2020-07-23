@@ -6,7 +6,7 @@
 1. [scada-war](https://github.com/shroysha/scada-war)
 
 ## Description
-null
+SCADA EAR
 
 ### Tags
 [EAR]
